@@ -1,4 +1,4 @@
-# What Is a Logic Analyzer?
+# What Is a Logic Analyzer, and What Is It Used For?
 
 ## What Is a Logic Analyzer, and What Is It Used For?
 
