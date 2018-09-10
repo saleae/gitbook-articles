@@ -8,8 +8,6 @@ Based on: [https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCH
 
 #### History
 
-This is a *test* of my ***ability*** and mad skillllllzzzzz.
-
 Trying to measure signals from ICs using oscilloscopes in the 1960s
 
 %%%photo of old oscope%%%
