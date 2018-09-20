@@ -45,8 +45,24 @@ PC-based logic analyzer (standalone units that plug into a computer via USB, Eth
 
 ### How a Logic Analyzer Works
 
+Input is digitized: thresholds for TTL, CMOS, user-defined. 0 for low, 1 for high.
 
+Sync (state) vs async (timing) clocking
 
-### Uses
+All channels are sampled simultaneously and stored in memory
+
+When trigger condition is met, contents in memory are displayed. Triggers can be user pushing button, single channel transition, several channel states, pattern in one or more channels.
+
+Various tools can help the user browse through the data, search for patters, and analyze protocols.
+
+### Why Would You Need a Logic Analyzer?
 
 What kinds of problems can LAs help you solve?
+
+Measure the time between events.
+
+Debug protocols such as UART, SPI, I2C, etc.
+
+Test and characterize firmware (toggle GPIO at the beginning and end of events)--interrupts, sleep, power
+
+Reverse engineer undocumented digital hardware
