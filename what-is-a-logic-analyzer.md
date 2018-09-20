@@ -1,10 +1,18 @@
-# What Is a Logic Analyzer, and What Is It Used For?
+# What Is a Logic Analyzer?
 
-## What Is a Logic Analyzer, and What Is It Used For?
+## What Is a Logic Analyzer?
 
 A logic analyzer is an instrument for capturing, displaying, and measuring multiple electronic signals simultaneously in a digital circuit. Logic analyzers are capable of showing the relationship and timing among many different signals in a digital system and are often capable of analyzing digital communication protocols, such as I2C, SPI, and Serial. As a result, a logic analyzer is the best tool for debugging digital circuits and digital communication systems.
 
 Based on: [https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCHyjqyvKdGAg-OGLGmM84YXGnl5XxUFIme](https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCHyjqyvKdGAg-OGLGmM84YXGnl5XxUFIme)
+
+### Filling a Need
+
+Digital logic and ICs in the 60s, need to view several channels at once. Oscilloscopes around since 1930s, channels are expensive. first LA in 197?
+
+Differences between LA and oscilloscope
+
+### What Makes a Logic Analyzer Unique
 
 * Record one or more digital signals simultaneously
   * Potentially start recording based on a trigger
@@ -29,5 +37,16 @@ Based on: [https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCH
   * List examples of protocols supported by Saleae analyzer
   * %%%screenshot of analyzed Serial data%%%
 
+### Form Factors
+
+Portable logic analyzer (instrument chassis)
+Modular logic analyzer (modules that plug into a mainframe)
+PC-based logic analyzer (standalone units that plug into a computer via USB, Ethernet, etc.)
+
+### How a Logic Analyzer Works
 
 
+
+### Uses
+
+What kinds of problems can LAs help you solve?
