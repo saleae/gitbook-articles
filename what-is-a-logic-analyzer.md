@@ -4,11 +4,15 @@
 
 A logic analyzer is an instrument for capturing, displaying, and measuring multiple electronic signals simultaneously in a digital circuit. Logic analyzers are capable of showing the relationship and timing among many different signals in a digital system and are often capable of analyzing digital communication protocols, such as I2C, SPI, and Serial. As a result, a logic analyzer is the best tool for debugging digital circuits and digital communication systems.
 
-Based on: [https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCHyjqyvKdGAg-OGLGmM84YXGnl5XxUFIme](https://paper.dropbox.com/doc/Logic-Analyzer-Basics--AMVXGzmE7xq2lyCHyjqyvKdGAg-OGLGmM84YXGnl5XxUFIme)
-
 ### Filling a Need
 
-Digital logic and ICs in the 60s, need to view several channels at once. Oscilloscopes around since 1930s, channels are expensive. first LA in 197?
+The 1960s saw the rise of the integrated circuit (IC), which meant that circuits started to become smaller. In turn, thousands--eventually millions--of transistors could be packed into a single chip to perform complex digital logic operations, forming the basis for most microcontrollers, microprocessors, and field-programmable gate arrays (FPGAs) that we know today.
+
+As transistor count and pin count grew on these ICs, testing and characterizing them became increasingly difficult. Oscilloscopes have been around since the 1930s, and while they are often considered the de facto test equipment for many electrical engineers, adding more than a handful of channels to an oscilloscope proved extremely costly. 
+
+In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display digital logic across a set of LEDs. The HP 5000A was the first commercially available logic analyzer, but ut was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
+
+
 
 Differences between LA and oscilloscope
 
