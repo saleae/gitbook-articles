@@ -12,11 +12,11 @@ As transistor count and pin count grew on these ICs, testing and characterizing 
 
 In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display digital logic across a set of LEDs. The HP 5000A was the first commercially available logic analyzer, but ut was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
-![](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
+![Tektronix Logic Analyzer TLA5204](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
 
-"[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 
-Differences between LA and oscilloscope
+The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to 4 channels (some oscilloscopes offer more channels, but 2-4 channels are the most common). Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, propagation delays, and setup-and-hold times. If you require a higher channel count to trace and correlate multiple digital signals simultaneously, a logic analyzer is the right tool for the job.
 
 ### What Makes a Logic Analyzer Unique
 
