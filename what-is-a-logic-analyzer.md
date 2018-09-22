@@ -12,7 +12,7 @@ As transistor count and pin count grew on these ICs, testing and characterizing 
 
 In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display digital logic across a set of LEDs. The HP 5000A was the first commercially available logic analyzer, but ut was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
-![&quot;Tektronix Logic Analyzer TLA5204&quot; by Vonvon is licensed under CC BY 2.0](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
+![&quot;<a href=https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg>Tektronix Logic Analyzer TLA5204</a>&quot; by Vonvon is licensed under CC BY 2.0](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
 
 Differences between LA and oscilloscope
 
