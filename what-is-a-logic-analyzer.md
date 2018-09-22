@@ -1,4 +1,4 @@
-# What Is a Logic Analyzer?
+# What Is a Logic Analyzer, and What Is It Used For?
 
 ## What Is a Logic Analyzer?
 
@@ -6,13 +6,13 @@ A logic analyzer is an instrument for capturing, displaying, and measuring multi
 
 ### Filling a Need
 
-The 1960s saw the rise of the integrated circuit (IC), which meant that circuits started to become smaller. In turn, thousands--eventually millions--of transistors could be packed into a single chip to perform complex digital logic operations, forming the basis for most microcontrollers, microprocessors, and field-programmable gate arrays (FPGAs) that we know today.
+The 1960s saw the rise of the integrated circuit \(IC\), which meant that circuits started to become smaller. In turn, thousands--eventually millions--of transistors could be packed into a single chip to perform complex digital logic operations, forming the basis for most microcontrollers, microprocessors, and field-programmable gate arrays \(FPGAs\) that we know today.
 
-As transistor count and pin count grew on these ICs, testing and characterizing them became increasingly difficult. Oscilloscopes have been around since the 1930s, and while they are often considered the de facto test equipment for many electrical engineers, adding more than a handful of channels to an oscilloscope proved extremely costly. 
+As transistor count and pin count grew on these ICs, testing and characterizing them became increasingly difficult. Oscilloscopes have been around since the 1930s, and while they are often considered the de facto test equipment for many electrical engineers, adding more than a handful of channels to an oscilloscope proved extremely costly.
 
 In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display digital logic across a set of LEDs. The HP 5000A was the first commercially available logic analyzer, but ut was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
-
+![&quot;Tektronix Logic Analyzer TLA5204&quot; by Vonvon is licensed under CC BY 2.0](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
 
 Differences between LA and oscilloscope
 
@@ -43,15 +43,13 @@ Differences between LA and oscilloscope
 
 ### Form Factors
 
-Portable logic analyzer (instrument chassis)
-Modular logic analyzer (modules that plug into a mainframe)
-PC-based logic analyzer (standalone units that plug into a computer via USB, Ethernet, etc.)
+Portable logic analyzer \(instrument chassis\) Modular logic analyzer \(modules that plug into a mainframe\) PC-based logic analyzer \(standalone units that plug into a computer via USB, Ethernet, etc.\)
 
 ### How a Logic Analyzer Works
 
 Input is digitized: thresholds for TTL, CMOS, user-defined. 0 for low, 1 for high.
 
-Sync (state) vs async (timing) clocking
+Sync \(state\) vs async \(timing\) clocking
 
 All channels are sampled simultaneously and stored in memory
 
@@ -67,6 +65,7 @@ Measure the time between events.
 
 Debug protocols such as UART, SPI, I2C, etc.
 
-Test and characterize firmware (toggle GPIO at the beginning and end of events)--interrupts, sleep, power
+Test and characterize firmware \(toggle GPIO at the beginning and end of events\)--interrupts, sleep, power
 
 Reverse engineer undocumented digital hardware
+
