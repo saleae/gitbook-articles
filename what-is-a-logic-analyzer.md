@@ -16,7 +16,7 @@ In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" t
 
 Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 
-The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to 4 channels (some oscilloscopes offer more channels, but 2-4 channels are the most common). Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, propagation delays, and setup-and-hold times. If you require a higher channel count to trace and correlate multiple digital signals simultaneously, a logic analyzer is the right tool for the job.
+The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to 4 channels \(some oscilloscopes offer more channels, but 2-4 channels are the most common\). Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, propagation delays, and setup-and-hold times. If you require a higher channel count to trace and correlate multiple digital signals simultaneously, a logic analyzer is the right tool for the job.
 
 ### What Makes a Logic Analyzer Unique
 
