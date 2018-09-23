@@ -77,6 +77,12 @@ Another unique feature of logic analyzers is the ability to decode signals. Most
 
 ### Form Factors
 
+Logic analyzers can generally be found in one of three forms: portable, modular, and PC-based. _Portable logic analyzers_ have the more traditional "test equipment" form factor, often larger than most workbench oscilloscopes. They are considered "portable" as they include everything required to capture, view, and analyze digital signals such as probes, a screen, cursor controls, and sometimes a full keyboard.
+
+![Example of a portable logic analyzer](.gitbook/assets/34227038302_848b4e6729_k.jpg)
+
+_Modular logic analyzers_ are rack- or PC-mounted cards that slide into a mainframe or backplane. The are considered "modular" because the end user can purchase and swap out various acquisition and test modules on a single backplane depending on their needs. 
+
 Portable logic analyzer \(instrument chassis\) Modular logic analyzer \(modules that plug into a mainframe\) PC-based logic analyzer \(standalone units that plug into a computer via USB, Ethernet, etc.\)
 
 ### How a Logic Analyzer Works
