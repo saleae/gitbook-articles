@@ -80,14 +80,12 @@ _PC-based logic analyzers_ rely on computers to perform the heavy lifting of dis
 
 ### Why Would You Need a Logic Analyzer?
 
-Oscilloscopes can measure digital signals in much the same way but are limited by the number of channels available. An oscilloscope is the right tool for measuring how the voltage between two points in a circuit varies or fluctuates over time. 
-
-However, logic analyzers can be extremely useful for testing, debugging, and characterizing digital circuits with several advantages over oscilloscopes:
+Oscilloscopes can measure digital signals in a similar fashion to logic analyzers but are limited by the number of channels available. An oscilloscope is the right tool for measuring how the voltage between two points in a circuit varies or fluctuates over time. However, logic analyzers can be extremely useful for testing, debugging, and characterizing digital circuits with several advantages over oscilloscopes:
 
  * More channels than an oscilloscope
  * Characterize the output of a digital circuit (e.g. FPGAs)
- * Debug complex embedded firmware by toggling general purpose input/output \(GPIO\) pins
+ * Debug complex embedded firmware by toggling general purpose input/output (GPIO) pins
  * Quickly measure and decode various digital protocols
- * PC-based logic analyzers can be great for debugging in the field 
+ * PC-based logic analyzers can be great for debugging in the field due to their small size and portability
 
 Looking for some logic analyzers? Check out the intuitive, PC-based [logic analyzers by Saleae](https://www.saleae.com/).
