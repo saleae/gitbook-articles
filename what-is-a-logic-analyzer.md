@@ -14,23 +14,23 @@ As transistor count and pin count grew on these ICs, testing and characterizing 
 
 In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display logic states across a set of LEDs. The HP 5000A was the first commercially available logic analyzer but was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
-![Tektronix Logic Analyzer TLA5204](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
-
-Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
-
 The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to 4 channels \(some oscilloscopes offer more channels, but 2-4 channels are the most common\). Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, and propagation delays. If you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
 
 ### What Makes a Logic Analyzer Unique
 
-The biggest advantage of a logic analyzer is its ability to record one or more digital signals simultaneously.  While a multi-channel oscilloscope could accomplish the same feat, logic analyzers generally offer more channels at a lower price. Number of channels usually range anywhere from 8 to over 100. 
+#### Recording Several Input Channels
 
-![Saleae Logic software simulating 8 channels of digital data](.gitbook/assets/screen_04.png)
+The biggest advantage of a logic analyzer is its ability to record a large number digital signals simultaneously, typically 8 to 100 channels. While oscilloscopes can also record digital data, they typically cannot match the same number of channels as a logic analyzer due to the memory requirements of storing analoag data.
+
+#### Complex Digital Triggering
 
 Similar to oscilloscopes, logic analyzers can be configured to begin recording on a trigger event. Triggers can be as simple as a single rising or falling edge of a particular channel, or they can be a complicated set of conditions that include edges or states of multiple channels.
 
+#### Mixed-Signal Capability
+
 Many modern logic analyzers include some oscilloscope functionality and vice versa. These new tools, capable of recording and analyzing digital as well as analog waveforms, are known as _mixed-signal oscilloscopes_. Test equipment that serve multiple purposes can make characterizing complex circuits and systems easier.
 
-![Saleae Logic software simulating digital and analog signals](.gitbook/assets/screen_05.png)
+![Logic analyzer software showing digital and analog signals](.gitbook/assets/screen_07.png)
 
 Many standalone logic analyzers include screens capable of displaying the captured signal data. However, as personal computers become more powerful with faster peripheral ports \(for example, USB 3.0\), some logic analyzers forgo the screen and rely on computer software to perform the analysis. This saves on equipment size and costs.
 
