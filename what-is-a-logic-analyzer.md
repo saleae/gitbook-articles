@@ -32,31 +32,39 @@ Many modern logic analyzers include some oscilloscope functionality and vice ver
 
 ![Logic analyzer software showing digital and analog signals](.gitbook/assets/screen_07.png)
 
+#### Portability
+
 Many standalone logic analyzers include screens capable of displaying the captured signal data. However, as personal computers become more powerful with faster peripheral ports \(for example, USB 3.0\), some logic analyzers forgo the screen and rely on computer software to perform the analysis. This saves on equipment size and costs.
+
+![PC-based logic analyzers can be quite small](.gitbook/assets/saleae_cable_harness.jpg)
+
+#### Ease of Data Navigation
 
 Most logic analyzers work by capturing digital data, storing it in a buffer, and then displaying it on a screen. Some are capable of showing signals in real-time, much like an oscilloscope. While this can be useful to look for trends while a system is running, it can be difficult to search through and look for details in the signals.
 
 Logic analyzers, whether standalone or attached to a computer, usually include software or controls for navigating through large amounts of signal data. This can include zooming, panning, searching, etc.
 
-![Using the Saleae Logic software to zoom and pan through signal data](.gitbook/assets/saleae-03-navigate.gif)
+![Using the Saleae Logic software to zoom and pan through signal data](.gitbook/assets/saleae-navigate.gif)
+
+#### Quick Digital Measurements
 
 Modern logic analyzers and logic analyzer software contain many advanced features that help users characterize signals. This includes measuring aspects of the signal, such as pulse width, frequency and period of periodic signals, as well as duty cycle.
 
-![Using the Saleae Logic software to measure pulse width, frequency, duty cycle, and period of a signal](.gitbook/assets/screen_01.png)
+![Using the Saleae Logic software to measure pulse width, frequency, duty cycle, and period of a signal](.gitbook/assets/screen_08.png)
 
 If you are analyzing transmission data between two systems, a logic analyzer can be an invaluable tool for timing analysis. For example, with I2C, the data line \(SDA\) needs to be held at its intended value for a particular amount of time \(part dependent\) before the rising edge of the clock line \(SCL\). This is known as _setup_ time. For most implementations of I2C, SDA also needs to be held at its intended value until the subsequent falling edge of SCL. This is known as _hold_ time.
 
-A logic analyzer with a fast enough sample rate can help measure setup and hold times.
+A logic analyzer with a fast enough sample rate can help measure setup and hold times, which can help ensure your messages are being read by the receiver.
 
 ![Measuring setup time \(A marker pair\) and hold time \(B marker pair\) during I2C communication](.gitbook/assets/screen_02.png)
 
-With recorded data, many logic analyzers will allow you to search through the data looking for particular patterns. For instance, in our I2C example, we can look for the device's bus address, as that will denote the beginning of a transmission. Some logic analyzers will let you set a search pattern as the trigger condition to begin recording.
-
-![Searching for a hex value to find the start of an I2C transmission](.gitbook/assets/saleae-logic-search.gif)
+#### Decode and Search Transmitted Data
 
 Another unique feature of logic analyzers is the ability to decode signals. Most modern digital communication is implemented based on a set of protocols. Logic analyzers or their associated software can include these protocols, known as _protocol analyzers_, to help you make sense of the captured data. Some of the popular protocols include: SPI, I2C, Serial \(UART/USART\), 1-Wire, CAN, UNI/O, I2S/PCM, JTAG, HDMI CEC, PS/2, and USB.
 
-![Using the Saleae Logic software to decode Serial data](.gitbook/assets/screen_03.png)
+![Using logic analyzer software to decode Serial data](.gitbook/assets/screen_09.png)
+
+With recorded data, many logic analyzers will allow you to search through the data looking for particular patterns. For instance, in our I2C example, we can look for the device's bus address, as that will denote the beginning of a transmission. Some logic analyzers will let you set a search pattern as the trigger condition to begin recording.
 
 ### Form Factors
 
