@@ -80,13 +80,14 @@ _PC-based logic analyzers_ rely on computers to perform the heavy lifting of dis
 
 ### Why Would You Need a Logic Analyzer?
 
-Logic analyzers can be extremely useful for testing, debugging, and characterizing digital circuits. While an oscilloscope can accomplish the same purpose of measuring and displaying digital signals, logic analyzers generally offer more channels at a lower cost.
+Oscilloscopes can measure digital signals in much the same way but are limited by the number of channels available. An oscilloscope is the right tool for measuring how the voltage between two points in a circuit varies or fluctuates over time. 
 
-A logic analyzer will allow you to measure the time between events, which can help you characterize a system's behavior, measure setup and hold times, or allow you to determine when events, like interrupts, might be occurring in your design. By toggling general purpose input/output \(GPIO\) pins on a microcontroller at certain times, you can measure how often and how long your processor is in a sleep state, consuming excess power in a critical section, or holding on to shared resources.
+However, logic analyzers can be extremely useful for testing, debugging, and characterizing digital circuits with several advantages over oscilloscopes:
 
-If you are presented with a piece of undocumented hardware and want to characterize its behavior, a logic analyzer can assist you in reverse engineering the piece of unknown digital circuitry. By analyzing the inputs and outputs of a system, you can begin to understand its function and purpose.
+ * More channels than an oscilloscope
+ * Characterize the output of a digital circuit (e.g. FPGAs)
+ * Debug complex embedded firmware by toggling general purpose input/output \(GPIO\) pins
+ * Quickly measure and decode various digital protocols
+ * PC-based logic analyzers can be great for debugging in the field 
 
-### Conclusion
-
-Logic analyzers are invaluable pieces of test equipment that can make testing digital hardware much easier. Most include the ability to capture multiple signals simultaneously and analyze various digital communication protocols. While portable logic analyzers are still quite common, PC-based analyzers are becoming more popular as personal computers are able to keep up with the demands of receiving and processing large amounts of captured signal data. If you find yourself debugging a custom digital logic circuit, a microcontroller board, or digital communication bus, a logic analyzer is the perfect tool for the job.
-
+Looking for some logic analyzers? Check out the intuitive, PC-based [logic analyzers by Saleae](https://www.saleae.com/).
