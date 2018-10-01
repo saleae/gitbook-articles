@@ -12,5 +12,5 @@
 
 ## Oscilloscopes
 
-* [What is an Oscilloscope?](oscilloscopes/oscilloscope-fundamentals.md)
+* [What is an Oscilloscope?](oscilloscopes/what-is-an-oscilloscope.md)
 
