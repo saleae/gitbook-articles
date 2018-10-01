@@ -12,19 +12,19 @@ The 1960s saw the rise of the integrated circuit \(IC\), which meant that circui
 
 As transistor count and pin count grew on these ICs, testing and characterizing them became increasingly difficult. Oscilloscopes have been around since the 1930s, and while they are often considered the de facto test instrument for many electrical engineers, adding more than a handful of channels to an oscilloscope proved extremely costly.
 
-In 1973, Hewlett Packard announced the invention of the first "Logic Anaylzer" that could measure and display logic states across a set of LEDs. The HP 5000A was the first commercially available logic analyzer but was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
+In 1973, Hewlett Packard announced the invention of the first "Logic Analyzer" that could measure and display logic states across a set of LEDs. The HP 5000A was the first commercially available logic analyzer but was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
 ![Tektronix Logic Analyzer TLA5204](.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
 
 Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 
-The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to 4 channels \(some oscilloscopes offer more channels, but 2-4 channels are the most common\). Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, and propagation delays. If you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
+The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to typically 4 channels. Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, and propagation delays. If you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
 
 ### What Makes a Logic Analyzer Unique?
 
 #### Recording Several Input Channels
 
-The biggest advantage of a logic analyzer is its ability to record a large number digital signals simultaneously, typically 8 to 100 channels. While oscilloscopes can also record digital data, they typically cannot match the same number of channels as a logic analyzer due to the memory requirements of storing analog data.
+A significant advantage of a logic analyzer is its ability to record a large number digital signals simultaneously, typically 8 to 100 channels. While oscilloscopes can also record digital data, they typically cannot match the same number of channels as a logic analyzer due to the memory requirements of storing analog data.
 
 #### Complex Digital Triggering
 
@@ -58,7 +58,7 @@ Modern logic analyzers and logic analyzer software contain many advanced feature
 
 If you are analyzing transmission data between two systems, a logic analyzer can be an invaluable tool for timing analysis. For example, with I2C, the data line \(SDA\) needs to be held at its intended value for a particular amount of time \(part dependent\) before the rising edge of the clock line \(SCL\). This is known as _setup_ time. For most implementations of I2C, SDA also needs to be held at its intended value until the subsequent falling edge of SCL. This is known as _hold_ time.
 
-A logic analyzer with a fast enough sample rate can help measure setup and hold times, which can help ensure your messages are being read by the receiver.
+A logic analyzer with a fast enough sample rate can help measure setup and hold times accurately. This can help ensure your digital messages are being read properly by the receiver.
 
 #### Decode and Search Transmitted Data
 
@@ -70,11 +70,17 @@ With recorded data, many logic analyzers will allow you to search through the da
 
 ### Form Factors
 
-Logic analyzers can generally be found in one of three forms: portable, modular, and PC-based. _Portable logic analyzers_ have the more traditional "test equipment" form factor, often larger than most workbench oscilloscopes. They are considered "portable" as they include everything required to capture, view, and analyze digital signals such as probes, a screen, cursor controls, and sometimes a full keyboard.
+#### Portable Logic Analyzers
+
+_Portable logic analyzers_ have the more traditional "test equipment" form factor, often larger than most workbench oscilloscopes. They are considered "portable" as they include everything required to capture, view, and analyze digital signals such as probes, a screen, cursor controls, and sometimes a full keyboard.
 
 ![Example of a portable logic analyzer](.gitbook/assets/34227038302_848b4e6729_k.jpg)
 
+#### Modular Logic Analyzers
+
 _Modular logic analyzers_ are rack- or PC-mounted cards that slide into a mainframe or backplane. The are considered "modular" because the end user can purchase and swap out various acquisition and test modules on a single backplane depending on their needs.
+
+#### PC-Based Logic Analyzers
 
 _PC-based logic analyzers_ rely on computers to perform the heavy lifting of displaying and analyzing the captured data. PC-based logic analyzers include a separate device that is plugged in to one of the computer's accessory ports. The device houses the necessary data acquisition circuitry for capturing multiple, high-speed digital signals. This information is sent to computer software over the connected port. Due to the speed requirements to transmit large amounts of captured data, most PC-based logic analyzers rely on high-speed, wired connections, such as USB or Ethernet.
 
