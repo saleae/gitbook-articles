@@ -18,13 +18,13 @@ In 1973, Hewlett Packard announced the invention of the first "Logic Analyzer" t
 
 Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 
-The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to typically 4 channels. Even for digital systems, an oscilloscope can be great for measuring things like rise and fall times, ringing, power consumption, jitter, and propagation delays. If you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
+The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to typically 4 channels. Even for digital systems, an oscilloscope can be great for inspecting analog properties of a signal such as rise and fall times, ringing, power consumption, jitter, and propagation delays. On the other hand, if you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
 
 ### What Makes a Logic Analyzer Unique?
 
 #### Recording Several Input Channels
 
-A significant advantage of a logic analyzer is its ability to record a large number digital signals simultaneously, typically 8 to 100 channels. While oscilloscopes can also record digital data, they typically cannot match the same number of channels as a logic analyzer due to the memory requirements of storing analog data.
+A significant advantage of a logic analyzer is its ability to record a large number of digital signals simultaneously, usually 8 to 100 channels. While oscilloscopes can also record digital data, they typically cannot match the number of channels and recording duration as a logic analyzer due to the memory requirements of storing analog data.
 
 #### Complex Digital Triggering
 
@@ -62,11 +62,11 @@ A logic analyzer with a fast enough sample rate can help measure setup and hold 
 
 #### Decode and Search Transmitted Data
 
-Another unique feature of logic analyzers is the ability to decode signals. Most modern digital communication is implemented based on a set of protocols. Logic analyzers or their associated software can include these protocols, known as _protocol analyzers_, to help you make sense of the captured data. Some of the popular protocols include: SPI, I2C, Serial \(UART/USART\), 1-Wire, CAN, UNI/O, I2S/PCM, JTAG, HDMI CEC, PS/2, and USB.
+Another unique feature of logic analyzers is the ability to decode signals. Most modern digital communication systems are implemented based on a set of protocols. Logic analyzers or their associated software can include these protocols, known as _protocol analyzers_, to help you make sense of the captured data.
 
 ![Decoding digital data](.gitbook/assets/2018-10-01_1428.png)
 
-With recorded data, many logic analyzers will allow you to search through the data looking for particular patterns. For instance, in our I2C example, we can look for the device's bus address, as that will denote the beginning of a transmission. Some logic analyzers will let you set a search pattern as the trigger condition to begin recording.
+With recorded data, many logic analyzers will allow you to search through the data looking for particular patterns. In I2C for instance, we can look for the device's bus address, as that will denote the beginning of a transmission. Some logic analyzers will let you set a search pattern as the trigger condition to begin recording.
 
 ### Form Factors
 
@@ -78,7 +78,7 @@ _Portable logic analyzers_ have the more traditional "test equipment" form facto
 
 #### Modular Logic Analyzers
 
-_Modular logic analyzers_ are rack- or PC-mounted cards that slide into a mainframe or backplane. The are considered "modular" because the end user can purchase and swap out various acquisition and test modules on a single backplane depending on their needs.
+_Modular logic analyzers_ are rack- or PC-mounted cards that slide into a mainframe or backplane. They are considered "modular" because the end user can purchase and swap out various acquisition and test modules on a single backplane depending on their needs.
 
 #### PC-Based Logic Analyzers
 
