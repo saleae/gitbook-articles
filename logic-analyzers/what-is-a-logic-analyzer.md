@@ -16,7 +16,7 @@ In 1973, Hewlett Packard announced the invention of the first "Logic Analyzer" t
 
 ![Tektronix Logic Analyzer TLA5204](../.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
 
-Image credits: "[Tektronix Logic Analyzer TLA5204](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)" by [Vonvon](https://commons.wikimedia.org/wiki/User:Vonvon) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+_Image credits: "_[_Tektronix Logic Analyzer TLA5204_](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)_" by_ [_Vonvon_](https://commons.wikimedia.org/wiki/User:Vonvon) _is licensed under_ [_CC BY 3.0_](https://creativecommons.org/licenses/by-sa/3.0/deed.en)\_\_
 
 The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to typically 4 channels. Even for digital systems, an oscilloscope can be great for inspecting analog properties of a signal such as rise and fall times, ringing, power consumption, jitter, and propagation delays. On the other hand, if you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
 

@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Saleae Articles](README.md)
+* [Untitled](untitled.md)
 
 ## Logic Analyzers
 
@@ -11,5 +12,5 @@
 
 ## Oscilloscopes
 
-* [Oscilloscope Fundamentals](oscilloscopes/oscilloscope-fundamentals.md)
+* [What is an Oscilloscope?](oscilloscopes/oscilloscope-fundamentals.md)
 
