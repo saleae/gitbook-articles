@@ -4,7 +4,7 @@
 
 A logic analyzer is an instrument for capturing, displaying, and measuring multiple electronic signals simultaneously in a digital circuit. Logic analyzers are capable of showing the relationship and timing among many different signals in a digital system and are often capable of analyzing digital communication protocols, such as I2C, SPI, and Serial. As a result, a logic analyzer is the best tool for debugging digital circuits and digital communication systems.
 
-![Digital data recorded by a logic analyzer](../.gitbook/assets/screen_06.png)
+![Logic analyzer decoding I2C and serial data](../.gitbook/assets/2018-10-05_1016.png)
 
 ### Invention of the Logic Analyzer
 
@@ -63,8 +63,6 @@ A logic analyzer with a fast enough sample rate can help measure setup and hold 
 #### Decode and Search Transmitted Data
 
 Another unique feature of logic analyzers is the ability to decode signals. Most modern digital communication systems are implemented based on a set of protocols. Logic analyzers or their associated software can include these protocols, known as _protocol analyzers_, to help you make sense of the captured data.
-
-![Decoding digital data](../.gitbook/assets/2018-10-01_1428.png)
 
 With recorded data, many logic analyzers will allow you to search through the data looking for particular patterns. In I2C for instance, we can look for the device's bus address, as that will denote the beginning of a transmission. Some logic analyzers will let you set a search pattern as the trigger condition to begin recording.
 
