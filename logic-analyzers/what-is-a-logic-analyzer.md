@@ -48,7 +48,7 @@ Most logic analyzers work by capturing digital data, storing it in a buffer, and
 
 Logic analyzers, whether standalone or attached to a computer, usually include software or controls for navigating through large amounts of signal data. This can include zooming, panning, searching, etc.
 
-![Zooming and panning through signal data](../.gitbook/assets/saleae-navigate.gif)
+![Panning and zooming digital data](../.gitbook/assets/saleae-navigate-zoom.gif)
 
 #### Quick Digital Measurements
 
