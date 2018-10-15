@@ -2,6 +2,7 @@
 
 * [Saleae Articles](README.md)
 * [Untitled](untitled.md)
+* [How to Use a Logic Analyzer](how-to-use-a-logic-analyzer.md)
 
 ## Logic Analyzers
 
