@@ -8,7 +8,7 @@ What happens when you need to troubleshoot a circuit with many different signals
 
 &lt;photo of logic analyzer connected to a circuit. Maybe?&gt;
 
-A logic analyzer and an [oscilloscope](oscilloscopes/what-is-an-oscilloscope.md) accomplish a similar purpose: both allow you to see how a signal's voltage changes over time. However, a logic analyzer is the better tool in a number of situations:
+A logic analyzer and an [oscilloscope](../oscilloscopes/what-is-an-oscilloscope.md) accomplish a similar purpose: both allow you to see how a signal's voltage changes over time. However, a logic analyzer is the better tool in a number of situations:
 
 * You want to observe many digital signals  at the same time
 * You want to look at digital signals the same way a system sees them
