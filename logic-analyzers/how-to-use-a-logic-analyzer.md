@@ -96,5 +96,5 @@ Some logic analyzers come with the ability to decode various communication proto
 
 Advanced logic analyzers can even be equipped with decoders capable of analyzing machine language and converting it to assembly code. This type of analysis would require software unique to each type of processor or instruction set.
 
-Using a logic analyzer is very similar to using an oscilloscope. However, if you need to debug a digital system with multiple signal lines, a logic analyzer might be option.
+Using a logic analyzer is very similar to using an oscilloscope. However, if you need to debug a digital system with multiple signal lines, a logic analyzer might be a better option.
 
