@@ -4,15 +4,7 @@
 
 ### When to Use a Logic Analyzer
 
-An [oscilloscope](../oscilloscopes/what-is-an-oscilloscope.md#what-is-an-oscilloscope) and a logic analyzer allow you to see how a signal's voltage changes over time. However, a logic analyzer is the better tool in a number of situations:
-
-* You want to observe many digital signals  at the same time
-* You want to look at digital signals the same way a system sees them
-* You need to trigger your data capture on a complex series of digital 1s and 0s
-
-Generally, you should consider using a logic analyzer when you are working with a digital system with more lines than can be measured by an oscilloscope.
-
-&lt;Photo of LA connected to circuit with lots of probes?&gt;
+A logic analyzer can help you see how a digital system's logic states change over time. At first glance, a logic analyzer might be intimidating to use, but this guide can help you. We will define a few key terms and give examples of decisions you must make at each step to help you find and analyze your system.
 
 In the rest of this tutorial, we will look at the five main steps normally taken to capture and analyze data using a logic analyzer:
 
@@ -37,6 +29,18 @@ A few definitions might help you on your journey with logic analyzers:
 **Memory Depth:** The amount of computer memory available to store the samples. The maximum memory depth for most logic analyzers is often presented as thousands or millions of samples per channel.
 
 **Trigger:** The condition or conditions necessary that cause the logic analyzer to begin sampling and recording data. For example, a rising or falling voltage on a particular channel or a particular pattern of 1s and 0s across multiple channels can be used as triggers.
+
+### Typical Controls
+
+Logic analyzers often have a set of buttons and knobs that allow you to configure the capture parameters or navigate through the display. PC-based logic analyzers are normally controlled through software on your computer.
+
+![Iwatsu SL-4121 Logic Analyzer](../.gitbook/assets/iwatsu-sl-4121-la_640px.jpg)
+
+Most logic analyzers will have a way to set your sampling mode, sampling rate, and triggers through a set of onscreen menus. Triggers and patterns can be set or searched using a numerical keypad, often with hexadecimal \(0-9, a-f\) inputs, or with a full keyboard.
+
+You can tell the logic analyzer to begin capturing with one of the "execute" buttons. In the image above, "repeat" will tell the analyzer to continue capturing whereas "single" will only capture data until the memory is full. You can stop capturing with the "stop" button.
+
+Once data has been captured, you can navigate through it and search for patterns. Arrow keys or a cursor knob will let you scroll through the data or zoom in on certain parts.
 
 ### Probe Setup
 
@@ -78,7 +82,7 @@ If we attach 4 logic analyzer probes to the "data in" pins \(D0-D3\) and a 5th p
 
 ### Configure Trigger
 
-Before you begin sampling, you will need to configure your trigger conditions. How else will the logic analyzer know to start sampling data?
+Before you begin sampling, you will need to configure your trigger conditions. There are a few options worth considering to help you capture the data you need. 
 
 **No trigger:** With no trigger, the logic analyzer will begin sampling and recording data as soon as you press the "Start" or "Run" button.
 
@@ -88,17 +92,21 @@ Before you begin sampling, you will need to configure your trigger conditions. H
 
 **Complex Trigger:** Some advanced logic analyzers will let you set a series of if-then-else statements to create a trigger. These types of triggers can be helpful to look for transmissions to a particular address on a bus, for example.
 
+Most logic analyzers will let you configure a trigger by selecting a channel with the onscreen menu and selecting from a number options, including rising edge, falling edge, pulse width, etc. A pattern trigger can be set by selecting multiple channels and setting similar options, such as logic high or logic low.
+
 ### Acquire
 
-For most logic analyzers, you push a button named "start" or "run." With no trigger set, the analyzer will begin sampling and storing data until memory is full.
+For most logic analyzers, you push a button named "start" or "run." With no trigger set, the analyzer will begin sampling and storing data until memory is full. However, you have a few options available to help you find the data you need.
 
 If you configured a trigger, the analyzer will begin capturing data, but older samples will be thrown out to make room for new samples. When the trigger condition is met, the logic analyzer will continue capturing data until its memory is full. Some logic analyzers retain and display a portion of the data prior to the trigger point. Information shown before the trigger is known as "negative time."
 
 &lt;captured data with trigger and negative time&gt;
 
+Some analyzers have a "repeat" or "continuous" capture mode that will continually capture and display data in real-time without stopping. This mode can be helpful for looking for signals that you might not know exist yet.
+
 ### Display and Analyze
 
-Most logic analyzers will display data as waveforms with time in the x-axis and voltage in the y-axis. This type of display is useful for seeing correlation among multiple signals in the time domain.
+Most logic analyzers will display data as waveforms with time in the x-axis and logic state \(1 or 0\) in the y-axis. This type of display is useful for seeing correlation among multiple signals in the time domain.
 
 &lt;diagram of several digital signals&gt;
 
@@ -108,5 +116,5 @@ Some logic analyzers come with the ability to decode various communication proto
 
 Advanced logic analyzers can even be equipped with decoders capable of analyzing machine language and converting it to assembly code. This type of analysis would require software unique to each type of processor or instruction set.
 
-Using a logic analyzer is very similar to using an oscilloscope. However, if you need to debug a digital system with multiple signal lines or decode digital communication, a logic analyzer might be the better option.
+To view the captured data in greater detail, most logic analyzers will let you scroll or zoom using buttons or knobs. Many analyzers will also let you search for patterns by entering numbers or ASCII characters. Setting decoders usually involves selecting from an available list in one of the analyzer's menus.
 
