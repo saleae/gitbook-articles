@@ -2,9 +2,7 @@
 
 ## How to Use a Logic Analyzer
 
-### When to Use a Logic Analyzer
-
-A logic analyzer can help you see how a digital system's logic states change over time. At first glance, a logic analyzer might be intimidating to use, but this guide can help you. We will define a few key terms and give examples of decisions you must make at each step to help you find and analyze your system.
+A logic analyzer can help you see how a digital system's logic states change over time. At first glance, a logic analyzer might be intimidating to use, but this guide can help you. We will define a few key terms and give examples of decisions you must make at each step to help you analyze your system.
 
 In the rest of this tutorial, we will look at the five main steps normally taken to capture and analyze data using a logic analyzer:
 
@@ -44,7 +42,7 @@ Once data has been captured, you can navigate through it and search for patterns
 
 ### Probe Setup
 
-Most logic analyzers come with a special wire harness that contains a number of probes. To begin, connect the wire harness to the logic analyzer.
+Most logic analyzers come with a special wire harness that contains a number of probes, also known as "flying lead probes." To begin, connect the wire harness to the logic analyzer.
 
 Next, ensure that the system or device you wish to test is off! We don't want to accidentally short something out in our circuit with a probe. Find the "ground" or "common" probe and attach it to the ground or common in your system. Ground will be used as a reference voltage when sampling signal lines. 
 
@@ -52,15 +50,13 @@ Note that for some logic analyzers, you will only need to attach one ground prob
 
 Finally, find the signal lines in your circuit that you wish to monitor. These could be GPIO lines or a communication bus, such as UART, SPI, or I2C. Attach one probe to each signal line. The logic analyzer will measure the difference between the reference voltage and signal voltage on each line.
 
-&lt;image of annotated schematic showing where to connect probes. I2C?&gt;
+![Example of where to attach logic analyzer probes to capture I2C data](../.gitbook/assets/schematic-probe-locations.png)
 
 Most logic analyzers have clip-on probes that you can attach to headers, plated-through hole \(PTH\) parts, or even some larger surface-mount devices \(SMD\). If you are working with small SMD parts with no exposed leads, you can solder thin wire to an exposed printed circuit board \(PCB\) trace to give you access to the signal.
 
-&lt;photo of clipped probe&gt;
+![Example of logic analyzer probes attached to a TSSOP surface mount component](../.gitbook/assets/logic-analyzer-probes.jpg)
 
 Some high-density or high-speed systems may require a specialized connector. Test PCBs can be made with these connectors, which mate to a wire harness connector from the logic analyzer. During development, this technique can save time from having to wire up dozens of probes to the circuit. 
-
-&lt;photo of high-density connector on circuit&gt;
 
 ### Sampling Modes
 
@@ -68,17 +64,17 @@ Most logic analyzers have two methods of capturing and displaying data: timing m
 
 In timing mode, also known as "asynchronous mode," data is captured at precise intervals according to the logic analyzer's internal clock. The sample rate can often be set by the user. For example, if you set the sample rate to 1 khz, the logic analyzer will capture data 1000 times per second \(in other words, sample the probed lines once every millisecond\).
 
-In the image below, we can see how a logic analyzer \(with 1 channel\) will sample a sinewave at precise intervals. The voltage at each sample is compared to the threshold. A digital signal is reconstructed from the captured 1s and 0s to show a waveform to the user.
+In the image below, we can see how a logic analyzer \(with 1 channel\) will sample a sine wave at precise intervals. The voltage at each sample is compared to the threshold. A digital signal is reconstructed from the captured 1s and 0s to show a waveform to the user.
 
-&lt;image if sampling sine wave&gt;
+![Example of sampling a sine wave in timing mode](../.gitbook/assets/timing-mode-example.png)
 
 State mode, also called "synchronous mode," requires one of the channels to tell the logic analyzer when to sample the other channels. If your system under test requires a clock line, this mode can be helpful for viewing data as your system might see it.
 
-In the example below, we have 4 D flip-flops. Each has a "data in" line \(labeled D0-D3\), a "data out" line \(labeled Q0-Q3\), and a clock line \(CLK\). On each rising edge of the clock signal, the logic level at the "data in" pin is latched and replicated on the "data out" pin.
+In the example below, we have two D flip-flops. Each has a "data in" line \(labeled D0-D1\), a "data out" line \(labeled Q0-Q1\), and a clock line \(clk\). On each rising edge of the clock signal, the logic level at the "data in" pin is latched and replicated on the "data out" pin.
 
-If we attach 4 logic analyzer probes to the "data in" pins \(D0-D3\) and a 5th probe to the CLK line, we can use state mode to see what the data should look like at the outputs. Note that state mode data is often presented in list format.
+If we attach 2 logic analyzer probes to the "data in" pins \(D0-D1\) and a third probe to the clk line, we can use state mode to see what the data should look like at the outputs \(Q0-Q1\). Note that state mode data is often presented in list format.
 
-&lt;image of sampling 4 D flip flops&gt;
+![Example of sampling the inputs to D flip-flops in state mode](../.gitbook/assets/state-mode-example.png)
 
 ### Configure Trigger
 
@@ -92,15 +88,15 @@ Before you begin sampling, you will need to configure your trigger conditions. T
 
 **Complex Trigger:** Some advanced logic analyzers will let you set a series of if-then-else statements to create a trigger. These types of triggers can be helpful to look for transmissions to a particular address on a bus, for example.
 
-Most logic analyzers will let you configure a trigger by selecting a channel with the onscreen menu and selecting from a number options, including rising edge, falling edge, pulse width, etc. A pattern trigger can be set by selecting multiple channels and setting similar options, such as logic high or logic low.
+Most logic analyzers will let you configure a trigger by selecting a channel with the onscreen menu and selecting from a number options, including rising edge, falling edge, pulse width, etc. A pattern trigger can be set by selecting multiple channels and setting channel state options, such as logic high or logic low.
 
 ### Acquire
 
-For most logic analyzers, you push a button named "start" or "run." With no trigger set, the analyzer will begin sampling and storing data until memory is full. However, you have a few options available to help you find the data you need.
+For most logic analyzers, you push a button named "start" or "run." With no trigger set, the analyzer will begin sampling and storing data until memory is full.
 
-If you configured a trigger, the analyzer will begin capturing data, but older samples will be thrown out to make room for new samples. When the trigger condition is met, the logic analyzer will continue capturing data until its memory is full. Some logic analyzers retain and display a portion of the data prior to the trigger point. Information shown before the trigger is known as "negative time."
+On the other hand, if you configured a trigger, the analyzer will begin capturing data, but older samples will be thrown out to make room for new samples. When the trigger condition is met, the logic analyzer will continue capturing data until its memory is full. Some logic analyzers retain and display a portion of the data prior to the trigger point. Information shown before the trigger is known as "negative time."
 
-&lt;captured data with trigger and negative time&gt;
+![Example of a logic analyzer displaying data before the trigger point](../.gitbook/assets/negative-time.png)
 
 Some analyzers have a "repeat" or "continuous" capture mode that will continually capture and display data in real-time without stopping. This mode can be helpful for looking for signals that you might not know exist yet.
 
@@ -108,13 +104,13 @@ Some analyzers have a "repeat" or "continuous" capture mode that will continuall
 
 Most logic analyzers will display data as waveforms with time in the x-axis and logic state \(1 or 0\) in the y-axis. This type of display is useful for seeing correlation among multiple signals in the time domain.
 
-&lt;diagram of several digital signals&gt;
+![How a logic analyzer might display multiple signals](../.gitbook/assets/multiple-channels.png)
 
-Some logic analyzers come with the ability to decode various communication protocols, such as UART, SPI, I2C, etc. Decoders might show the data as a waveform but will also present the data as decimal, hexadecimal, ASCII, and so on. Decoding protocols can be extremely helpful in troubleshooting problems on these communication buses.
+Some logic analyzers come with the ability to decode various communication protocols, such as UART, SPI, I2C, etc. Decoders might show the data as a waveform but will also present the data as decimal, hexadecimal, ASCII, and so on. Decoding protocols can be extremely helpful in troubleshooting problems on communication buses.
 
-&lt;diagram of decoded ascii&gt;
+![Example of decoding the ASCII character &apos;a&apos; on the Tx line of a UART transmission](../.gitbook/assets/decoded-uart.png)
 
-Advanced logic analyzers can even be equipped with decoders capable of analyzing machine language and converting it to assembly code. This type of analysis would require software unique to each type of processor or instruction set.
+Advanced logic analyzers can even be equipped with decoders capable of analyzing machine language and converting it to assembly code. This type of analysis requires software unique to each type of processor or instruction set.
 
 To view the captured data in greater detail, most logic analyzers will let you scroll or zoom using buttons or knobs. Many analyzers will also let you search for patterns by entering numbers or ASCII characters. Setting decoders usually involves selecting from an available list in one of the analyzer's menus.
 
