@@ -2,7 +2,7 @@
 
 ## How to Use a Logic Analyzer
 
-A logic analyzer can help you see how a digital system's logic states change over time. At first glance, a logic analyzer might be intimidating to use, but this guide can help you. We will define a few key terms and give examples of decisions you must make at each step to help you analyze your system.
+A logic analyzer can help you visualize the transmission of data across data lines. It does this by converting the recorded voltages over time into a series of binary data \(1s and 0s\). At first glance, a logic analyzer might be intimidating to use, but this guide can help you. We will define a few key terms and give examples of decisions you must make at each step to help you analyze your system.
 
 In the rest of this tutorial, we will look at the five main steps normally taken to capture and analyze data using a logic analyzer:
 
