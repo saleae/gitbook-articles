@@ -18,25 +18,25 @@ A few definitions might help you on your journey with logic analyzers:
 
 **Channel:** A single signal line on the system under test. Logic analyzers are capable of monitoring anywhere from 4 to over 100 channels at the same time.
 
-**Threshold:** A voltage level set by logic analyzer or by the user. Voltages detected by the probe below the threshold are assigned a logic "0," and voltages above the threshold are assigned a logic "1."
+**Threshold:** A voltage level set by the logic analyzer or by the user. Voltages detected by the probe below the threshold are assigned a logic "0," and voltages above the threshold are assigned a logic "1."
 
-**Sample:** Data that is captured by the logic analyzer at a particular moment in time. The logic analyzer simultaneously compares the voltages detected on all probes to the threshold, translates them to logic 1s and 0s, and stores that data in memory.
+**Sample:** A single data point that is captured by the logic analyzer at a particular moment in time. The logic analyzer simultaneously compares the voltages detected on all probes to the threshold, translates them to logic 1s and 0s, and stores that data in memory.
 
-**Sample Rate:** How often the logic analyzer captures data. The maximum sample rate for a logic analyzer is often given as megahertz \(MHz\) or mega-samples per second \(Msps\); both of which equate to taking one set of samples \(across all channels\) one million times per second.
+**Sample Rate:** How fast the logic analyzer records samples within a given time period. The maximum sample rate for a logic analyzer is often given in the units of megahertz \(MHz\) or mega-samples per second \(Msps\); in both cases, a single unit \(1MHz or 1Msps\) equates to recording one million consecutive samples per second.
 
-**Memory Depth:** The amount of computer memory available to store the samples. The maximum memory depth for most logic analyzers is often presented as thousands or millions of samples per channel.
+**Memory Depth:** The amount of memory available to store the samples. The maximum memory depth for most logic analyzers is often presented as the number of samples which can be stored per channel.
 
-**Trigger:** The condition or conditions necessary that cause the logic analyzer to begin sampling and recording data. For example, a rising or falling voltage on a particular channel or a particular pattern of 1s and 0s across multiple channels can be used as triggers.
+**Trigger:** The condition\(s\) necessary that cause the logic analyzer to begin sampling and recording data. For example, a rising or falling voltage on a particular channel or a particular pattern of 1s and 0s across multiple channels can be used as triggers.
 
 ### Typical Controls
 
-Logic analyzers often have a set of buttons and knobs that allow you to configure the capture parameters or navigate through the display. PC-based logic analyzers are normally controlled through software on your computer.
+Logic analyzers often have a set of buttons and knobs that allow you to configure the capture parameters or navigate through the display as shown in the figure below. PC-based logic analyzers are normally controlled through virtual "knobs" located in the user interface of software on your computer.
 
-![Iwatsu SL-4121 Logic Analyzer](../.gitbook/assets/iwatsu-sl-4121-la_640px.jpg)
+![Typical Control Layout on an Iwatsu SL-4121 Logic Analyzer](../.gitbook/assets/iwatsu-sl-4121-la_640px.jpg)
 
 Most logic analyzers will have a way to set your sampling mode, sampling rate, and triggers through a set of onscreen menus. Triggers and patterns can be set or searched using a numerical keypad, often with hexadecimal \(0-9, a-f\) inputs, or with a full keyboard.
 
-You can tell the logic analyzer to begin capturing with one of the "execute" buttons. In the image above, "repeat" will tell the analyzer to continue capturing whereas "single" will only capture data until the memory is full. You can stop capturing with the "stop" button.
+You can tell the logic analyzer to begin recording data with one of the "Execute" buttons. In the image above, the "Repeat" button will tell the analyzer to continue capturing whereas the "Single" button will only capture data until the memory is full. You can stop capturing with the "Stop" button.
 
 Once data has been captured, you can navigate through it and search for patterns. Arrow keys or a cursor knob will let you scroll through the data or zoom in on certain parts.
 
@@ -44,9 +44,9 @@ Once data has been captured, you can navigate through it and search for patterns
 
 Most logic analyzers come with a special wire harness that contains a number of probes, also known as "flying lead probes." To begin, connect the wire harness to the logic analyzer.
 
-Next, ensure that the system or device you wish to test is off! We don't want to accidentally short something out in our circuit with a probe. Find the "ground" or "common" probe and attach it to the ground or common in your system. Ground will be used as a reference voltage when sampling signal lines. 
+Next, ensure that the system or device you wish to test is powered off! We don't want to accidentally short something out in our circuit with a probe. Find the "ground" or "common" probe and attach it to the ground or common in your system. Ground will be used as a reference voltage when sampling signal lines. 
 
-Note that for some logic analyzers, you will only need to attach one ground probe for the whole wire harness. With other analyzers, you will need to attach one ground probe for each signal probe.
+Note that for some logic analyzers, you will only need to attach one ground probe for the whole wire harness. With other analyzers, you will need to attach one ground probe for each signal probe. Please refer to your logic analyzer's user manual to understand its grounding requirements.
 
 Finally, find the signal lines in your circuit that you wish to monitor. These could be GPIO lines or a communication bus, such as UART, SPI, or I2C. Attach one probe to each signal line. The logic analyzer will measure the difference between the reference voltage and signal voltage on each line.
 
@@ -54,9 +54,11 @@ Finally, find the signal lines in your circuit that you wish to monitor. These c
 
 Most logic analyzers have clip-on probes that you can attach to headers, plated-through hole \(PTH\) parts, or even some larger surface-mount devices \(SMD\). If you are working with small SMD parts with no exposed leads, you can solder thin wire to an exposed printed circuit board \(PCB\) trace to give you access to the signal.
 
-![Example of logic analyzer probes attached to a TSSOP surface mount component](../.gitbook/assets/logic-analyzer-probes.jpg)
+![Clip-on probe attached to an SMD part via soldered wire](../.gitbook/assets/img_4698.JPG)
 
-Some high-density or high-speed systems may require a specialized connector. Test PCBs can be made with these connectors, which mate to a wire harness connector from the logic analyzer. During development, this technique can save time from having to wire up dozens of probes to the circuit. 
+![Clip-on probes attached directly to an SMD part](../.gitbook/assets/logic-analyzer-probes.jpg)
+
+Some high-density or high-speed systems may require a specialized connector to reduce losses and radiated noise. Test PCBs can be made with these connectors, which mate to a wire harness connector from the logic analyzer. During development, this technique can save time from having to wire up dozens of probes to the circuit. 
 
 ### Sampling Modes
 
@@ -64,7 +66,7 @@ Most logic analyzers have two methods of capturing and displaying data: timing m
 
 In timing mode, also known as "asynchronous mode," data is captured at precise intervals according to the logic analyzer's internal clock. The sample rate can often be set by the user. For example, if you set the sample rate to 1 khz, the logic analyzer will capture data 1000 times per second \(in other words, sample the probed lines once every millisecond\).
 
-In the image below, we can see how a logic analyzer \(with 1 channel\) will sample a sine wave at precise intervals. The voltage at each sample is compared to the threshold. A digital signal is reconstructed from the captured 1s and 0s to show a waveform to the user.
+In the image below, we can see how a single logic analyzer channel will sample a sine wave at precise intervals. The voltage at each sample is compared to the threshold. A digital signal is reconstructed from the captured 1s and 0s to show a waveform to the user.
 
 ![Example of sampling a sine wave in timing mode](../.gitbook/assets/timing-mode-example.png)
 
@@ -92,7 +94,7 @@ Most logic analyzers will let you configure a trigger by selecting a channel wit
 
 ### Acquire
 
-For most logic analyzers, you push a button named "start" or "run." With no trigger set, the analyzer will begin sampling and storing data until memory is full.
+For most logic analyzers, you push a button named "Start" or "Run." With no trigger set, the analyzer will begin sampling and storing data until memory is full.
 
 On the other hand, if you configured a trigger, the analyzer will begin capturing data, but older samples will be thrown out to make room for new samples. When the trigger condition is met, the logic analyzer will continue capturing data until its memory is full. Some logic analyzers retain and display a portion of the data prior to the trigger point. Information shown before the trigger is known as "negative time."
 
