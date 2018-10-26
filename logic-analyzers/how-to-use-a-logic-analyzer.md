@@ -62,7 +62,7 @@ Some high-density or high-speed systems may require a specialized connector to r
 
 ### Sampling Modes
 
-Most logic analyzers have two methods of capturing and displaying data: timing mode and state mode. You will need to select the mode best suited for your application.
+Most logic analyzers have two methods of capturing and displaying data: timing mode and state mode. Timing mode is useful to view data as a waveform that changes over time whereas state mode allows you to visualize data as a list synchronized to a clock. State mode can be helpful to view data in the same manner a receiver on a transmission bus might see it.
 
 In timing mode, also known as "asynchronous mode," data is captured at precise intervals according to the logic analyzer's internal clock. The sample rate can often be set by the user. For example, if you set the sample rate to 1 khz, the logic analyzer will capture data 1000 times per second \(in other words, sample the probed lines once every millisecond\).
 
@@ -70,11 +70,11 @@ In the image below, we can see how a single logic analyzer channel will sample a
 
 ![Example of sampling a sine wave in timing mode](../.gitbook/assets/timing-mode-example.png)
 
-State mode, also called "synchronous mode," requires one of the channels to tell the logic analyzer when to sample the other channels. If your system under test requires a clock line, this mode can be helpful for viewing data as your system might see it.
+State mode, also called "synchronous mode," requires one of the channels to be defined as a clock. Signals on the other data lines are sampled on the edge\(s\) of the clock signal. If a transmission bus relies on a clock line, this can be a useful way to visualize data in the same way your receiver sees it.
 
-In the example below, we have two D flip-flops. Each has a "data in" line \(labeled D0-D1\), a "data out" line \(labeled Q0-Q1\), and a clock line \(clk\). On each rising edge of the clock signal, the logic level at the "data in" pin is latched and replicated on the "data out" pin.
+In the example below, we have two D flip-flops. Each has a "data in" line \(labeled D0 or D1\), a "data out" line \(labeled Q0 or Q1\), and a clock line \(clk\). On each rising edge of the clock signal, the logic level at the "data in" pin is latched and replicated on the "data out" pin.
 
-If we attach 2 logic analyzer probes to the "data in" pins \(D0-D1\) and a third probe to the clk line, we can use state mode to see what the data should look like at the outputs \(Q0-Q1\). Note that state mode data is often presented in list format.
+If we attach 2 logic analyzer probes to the "data in" pins \(D0-D1\) and a third probe to the clk line, we can use state mode to see what the data should look like at the outputs \(Q0-Q1\). Note that state mode data is often presented in list format. If we are unable to probe the outputs \(e.g. they are inside an IC\), this method can help us see what is happening inside the system.
 
 ![Example of sampling the inputs to D flip-flops in state mode](../.gitbook/assets/state-mode-example.png)
 
@@ -115,4 +115,8 @@ Some logic analyzers come with the ability to decode various communication proto
 Advanced logic analyzers can even be equipped with decoders capable of analyzing machine language and converting it to assembly code. This type of analysis requires software unique to each type of processor or instruction set.
 
 To view the captured data in greater detail, most logic analyzers will let you scroll or zoom using buttons or knobs. Many analyzers will also let you search for patterns by entering numbers or ASCII characters. Setting decoders usually involves selecting from an available list in one of the analyzer's menus.
+
+A logic analyzer is a powerful tool for analyzing digital systems, and understanding the different modes and triggers can help you capture data in the right way. 
+
+
 
