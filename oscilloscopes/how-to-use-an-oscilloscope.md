@@ -50,7 +50,7 @@ Because the discharge of the capacitor in the circuit is a single event, you sho
 
 Ideally, you might prefer to start capturing the event a moment before the voltage drop occurs. This can be arranged quite easily, because a digital oscilloscope stores data in memory all the time. When the voltage drop begins, the scope has already stored the data that preceded it, and can generate a trace from that point onward. This is shown in Figure 6.
 
-![](../.gitbook/assets/figure-6-capacitor-discharge.png)
+![Figure 6: Capturing the discharge of a capacitor ](../.gitbook/assets/figure-6-capacitor-discharge.png)
 
 To make the trace fit neatly on the screen, you will have to set VOLTS/DIV to match the voltage range on the capacitor, then experiment with values for TIME/DIV. Each horizontal division in Figure 6 is 1 millisecond, but your ideal TIME/DIV will depend on the size of the capacitor, the value of the resistor, and the voltage of the power supply in your test circuit.
 
@@ -60,11 +60,21 @@ Now suppose you want to capture a signal that repeats continuously, such as the 
 
 Figure 7 shows the continuous square-wave output from a 7555 timer chip. In Figure 8, you see how the signal changes if a capacitor is placed between the output pin of the chip and ground. The output voltage now rises slowly as the chip charges the capacitor, then drops more sharply as the capacitor discharges into the chip. To avoid overheating the chip with too much current, this test should not continue over a long period.
 
+![Figure 7: Continuous square-wave output from a 7555 timer](../.gitbook/assets/figure-7-square-wave-7555.png)
+
+![Figure 8: Capacitor placed at the output of a 7555 timer](../.gitbook/assets/figure-8-square-wave-7555-rounded.png)
+
 Disconnect the capacitor, remove the 7555, substitute a 555 timer wired asynchronously, and the result is shown in Figure 9. It looks almost identical to Figure 7 except that there is a short voltage spike at the beginning of each high segment of the trace. The 555 is a very old TTL design which is known to create a noisy output.
+
+![Figure 9: The older 555 timer&apos;s output with a short voltage spike ](../.gitbook/assets/figure-9-square-wave-555.png)
 
 Your oscilloscope can magnify an image to show you what's happening, but if you try to view the voltage spike this way, you probably won't see enough detail. You need to sample the voltage more frequently, which will happen automatically if you decrease the value of TIME/DIV to focus on a briefer window in time. In Figure 10, the X axis is now calibrated in microseconds instead of seconds.
 
+![Figure 10: The 555 timer&apos;s voltage spike zoomed in](../.gitbook/assets/figure-10-555-spike.png)
+
 Figure 11 uses identical settings to reveal the output of a 7555 timer. You can see that the more modern CMOS design of the 7555 completely eliminates the transient spike of the 555, although the rise time of the output is a little slower.
+
+![Figure 11: A cleaner output rising edge from the 7555 timer](../.gitbook/assets/figure-11-7555-no-spike.png)
 
 What if you have a continuous signal that does not repeat, such as the output from a microphone? Begin with your oscilloscope in AUTO mode, then adjust TIME/DIV. Because every sample is now different, you may want to capture a rapid series of views. A typical digital oscilloscope can store 32 or more, allowing you to step through them after they have been saved to memory.
 
