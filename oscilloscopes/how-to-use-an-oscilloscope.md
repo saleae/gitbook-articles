@@ -2,7 +2,11 @@
 
 ## How to Use an Oscilloscope
 
-This tutorial explains how to set up an oscilloscope and then display a varying voltage as a trace that you scale to fit the screen.
+This tutorial explains how to set up an oscilloscope and then display a varying voltage as a trace that you scale to fit the screen. 
+
+For details on what an oscilloscope is and the problems that it solves, please take a look at our previous article below.
+
+{% page-ref page="what-is-an-oscilloscope.md" %}
 
 ### Oscilloscope Probes
 
@@ -26,19 +30,29 @@ When you use it in AUTO mode, your oscilloscope will try to create a display fro
 
 ### Basic Adjustments
 
-Different types of oscilloscopes have different user interfaces. A handheld model will allow adjustments with buttons, while a benchtop version usually has some physical knobs. A USB oscilloscope may show you little pictures of knobs that you can "turn" with a mouse pointer, or it may use drop-down menus. In all of these variants, the basic concepts remain the same.
+Different types of oscilloscopes have different user interfaces. A handheld model will allow adjustments with buttons, while a benchtop version usually has some physical knobs. A USB oscilloscope may show you little pictures of knobs that you can "turn" with a mouse pointer, or it may use drop-down menus. In all of these variants, the basic concepts remain the same. 
+
+Once the trace has been adjusted to your liking, you can save the data that created the trace, reload it later, and adjust some of the attributes. Your oscilloscope may also be able to save a screen shot in a format such as bitmap or jpeg.
+
+#### Gain Knob
 
 Voltage is displayed on the vertical scale at the left side of the screen, also known as the "Y axis." A knob or menu will let you choose the number of volts or millivolts for each division on the scale. This value is often abbreviated as VOLTS/DIV or may be referred to as "gain."
 
+#### Timebase Knob
+
 Time is displayed on the horizontal line at the bottom of the screen, also known as the "X axis." A knob or menu will let you choose the number of seconds, milliseconds, microseconds, or nanoseconds for each division on the scale. This value is often abbreviated as TIME/DIV or may be referred to as the "timebase."
+
+#### Trigger Level
 
 While the oscilloscope will trigger itself in AUTO mode, you can choose to set a "trigger level" specifying when to start capturing and displaying data. Your oscilloscope may allow you to set the level as a percentage of the total voltage range, or as a specific voltage. You can choose to begin capturing either when the voltage sensed by the probe rises above the trigger level or falls below it.
 
+#### Offset Position
+
 After you obtain a useful trace, you can adjust its location, sometimes referred to as the "offset." Moving it may be done with arrow buttons or with knobs labelled Y-POS \(vertical position\) and X-POS \(horizontal position\). On a USB oscilloscope, you may be able to drag the trace using a mouse.
 
-You can save the data that created the trace, reload it later, and adjust some of the attributes. Your oscilloscope may also be able to save a screen shot in a format such as bitmap or jpeg.
-
 ### Examples
+
+#### One-Shot Triggering
 
 To explore your options, you can use a simple test circuit in which a double-throw switch charges a capacitor from a battery and then discharges the capacitor through a resistor, as shown in Figure 5.
 
@@ -55,6 +69,8 @@ Ideally, you might prefer to start capturing the event a moment before the volta
 To make the trace fit neatly on the screen, you will have to set VOLTS/DIV to match the voltage range on the capacitor, then experiment with values for TIME/DIV. Each horizontal division in Figure 6 is 1 millisecond, but your ideal TIME/DIV will depend on the size of the capacitor, the value of the resistor, and the voltage of the power supply in your test circuit.
 
 Note that all the screen shots in this tutorial have been cropped and relabelled for clarity, but each trace was saved without any editing. The small bumps in the trace in Figure 6 probably resulted from electrical noise.
+
+#### Continuous Triggering
 
 Now suppose you want to capture a signal that repeats continuously, such as the output from a timer chip that has been wired asynchronously. When the oscilloscope is operating in "normal" mode, the trace on the screen updates itself frequently while you adjust VOLTS/DIV and TIME/DIV. You can immediately see the result of modifying a circuit, and you can also detect very brief events.
 
@@ -75,6 +91,8 @@ Your oscilloscope can magnify an image to show you what's happening, but if you 
 Figure 11 uses identical settings to reveal the output of a 7555 timer. You can see that the more modern CMOS design of the 7555 completely eliminates the transient spike of the 555, although the rise time of the output is a little slower.
 
 ![Figure 11: A cleaner output rising edge from the 7555 timer](../.gitbook/assets/figure-11-7555-no-spike.png)
+
+#### Recording a Non-Repeating Signal
 
 What if you have a continuous signal that does not repeat, such as the output from a microphone? Begin with your oscilloscope in AUTO mode, then adjust TIME/DIV. Because every sample is now different, you may want to capture a rapid series of views. A typical digital oscilloscope can store 32 or more, allowing you to step through them after they have been saved to memory.
 

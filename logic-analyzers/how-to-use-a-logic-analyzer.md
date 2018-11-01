@@ -74,7 +74,7 @@ State mode, also called "synchronous mode," requires one of the channels to be d
 
 In the example below, we have two D flip-flops. Each has a "data in" line \(labeled D0 or D1\), a "data out" line \(labeled Q0 or Q1\), and a clock line \(clk\). On each rising edge of the clock signal, the logic level at the "data in" pin is latched and replicated on the "data out" pin.
 
-If we attach 2 logic analyzer probes to the "data in" pins \(D0-D1\) and a third probe to the clk line, we can use state mode to see what the data should look like at the outputs \(Q0-Q1\). Note that state mode data is often presented in list format. If we are unable to probe the outputs \(e.g. they are inside an IC\), this method can help us see what is happening inside the system.
+If we attach 2 logic analyzer probes to the "data in" pins \(D0-D1\) and a third probe to the clk line, we can use state mode to see what the data should look like at the outputs \(Q0-Q1\). Note that state mode data is often presented in list format. If we are unable to probe the outputs \(e.g. they are inside an IC\), this method can help us see what could be happening inside the system.
 
 ![Example of sampling the inputs to D flip-flops in state mode](../.gitbook/assets/state-mode-example.png)
 
