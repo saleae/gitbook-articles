@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Saleae Articles](README.md)
-* [Untitled](untitled.md)
 
 ## Logic Analyzers
 
