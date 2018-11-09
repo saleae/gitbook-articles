@@ -8,7 +8,7 @@ This tutorial will explain some features that are slightly more advanced and may
 
 ### Digital Oscilloscopes Explained
 
-Most oscilloscopes today are digital, meaning that they take rapid samples of an analog voltage and digitize the samples for manipulation and storage. This processing is done internally in benchtop and handheld oscilloscopes, while a USB oscilloscope offloads the task to a desktop or laptop computer.
+Most oscilloscopes today are digital, meaning that they take rapid samples of an analog voltage and digitize the samples for manipulation and storage. This processing is done internally in benchtop and handheld oscilloscopes, while a USB oscilloscope typically offloads the task to a desktop or laptop computer.
 
 ### Bit Depth and Sampling Rate
 
