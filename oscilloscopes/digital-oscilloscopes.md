@@ -48,7 +48,7 @@ The two traces may also be displayed in a split screen, as in Figure 4. The VOLT
 
 ### Advanced Triggering
 
-On a digital oscilloscope, the basic triggering capability that I described in How to Use An Oscilloscope will have additional variations.
+On a digital oscilloscope, the basic triggering capability that I described in "How to Use An Oscilloscope" \(link above this article\) will have additional variations.
 
 A simple edge trigger tells the oscilloscope to start capturing data either when the voltage rises up through a trigger threshold or drops down through it. A digital oscilloscope can be set to respond if either of these events occurs.
 
