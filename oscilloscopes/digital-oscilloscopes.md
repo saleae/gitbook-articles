@@ -50,19 +50,29 @@ The two traces may also be displayed in a split screen, as in Figure 4. The VOLT
 
 On a digital oscilloscope, the basic triggering capability that I described in "How to Use An Oscilloscope" \(link above this article\) will have additional variations.
 
+#### Edge Trigger
+
 A simple edge trigger tells the oscilloscope to start capturing data either when the voltage rises up through a trigger threshold or drops down through it. A digital oscilloscope can be set to respond if either of these events occurs.
+
+#### Pulse-width Trigger
+
+Pulse-width triggering detects pulses that are either longer or shorter than specified. This is useful for sensing momentary timing inaccuracies in a repeating signal.
+
+#### Window Trigger
+
+A window trigger detects voltage entering or leaving a window that may be defined visually on the screen.
+
+#### Trigger Hysteresis
 
 Hysteresis can be specified to eliminate false positives caused by a noisy signal. This setting basically tells the oscilloscope, "When voltage rises through a lower threshold, wait until the voltage continues to rise through a higher threshold." In the hysteresis zone between these levels, the oscilloscope ignores small variations. If the voltage drops back below the lower threshold without ever reaching the higher threshold, the triggering operation is cancelled until the next rise through the lower threshold occurs.
 
 A hysteresis setting can also be used to sense a falling voltage that drops through a higher threshold followed by a lower threshold.
 
-A window trigger detects voltage entering or leaving a window that may be defined visually on the screen.
-
-All of these trigger options may help to detect events such as voltage spikes that are brief, intermittent, and difficult to see.
+#### Trigger Delays
 
 You may also set pre-trigger time or post-trigger delay to determine the moment when the signal will be displayed before or after the triggering event.
 
-Pulse-width triggering detects pulses that are either longer or shorter than specified. This is useful for sensing momentary timing inaccuracies in a repeating signal.
+All of these trigger options may help to detect events such as voltage spikes that are brief, intermittent, and difficult to see.
 
 ### Measurements
 
