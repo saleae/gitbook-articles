@@ -10,7 +10,7 @@ Logic analyzers, on the other hand, can only represent signals in their digital 
 
 The following diagram shows the basic functional blocks that can be found in a digital storage oscilloscope \(DSO\). Note that the blocks have been simplified.
 
-Block Diagram
+![Block diagram of an oscilloscope](../.gitbook/assets/oscilloscope_block_diagram.png)
 
 **Probe:** The part that attaches to your circuit. Most probes have two tips, as an oscilloscope measures the voltage \(electric potential difference\) between two points.
 
@@ -32,7 +32,7 @@ Block Diagram
 
 The following diagram shows the basic functional blocks in most logic analyzers. Like in the oscilloscope example, the blocks have been simplified.
 
-Block Diagram
+![Block diagram of a logic analyzer](../.gitbook/assets/logic_analyzer_block_diagram.png)
 
 **Probes:** Fitting many logic analyzer probes into a tight space is often a priority for users. As a result, probes are often simple: a piece of wire with a clip with little or no passive circuitry. Some probes can have dozens of channels packed into a single, high-density connector that requires a specialized mounting point on the system under test.
 
