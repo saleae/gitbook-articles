@@ -10,7 +10,7 @@ On the other hand, [Logic analyzers](what-is-a-logic-analyzer.md#what-is-a-logic
 
 Choosing the right tool for the job can be a crucial step when debugging circuits. At its core, an oscilloscope is useful for measuring and visualizing analog signals with 1-4 channels. A logic analyzer is best for digital systems with more than 4 channels.
 
-An oscilloscope can help you visualize analog waveforms and measure various characteristics, such as amplitude, ringing, transient signals, phase, unwanted pulses, etc. Even when debugging digital systems, you can easily measure signal integrity with an oscilloscope.
+An oscilloscope can help you visualize analog waveforms and measure various characteristics, such as amplitude, ringing, transient signals, phase, and unwanted pulses. Even when debugging digital systems, you can easily measure signal integrity with an oscilloscope.
 
 ![Example of an oscilloscope displaying a sine wave and overshoot on two channels](../.gitbook/assets/oscilloscope_display_example.png)
 
