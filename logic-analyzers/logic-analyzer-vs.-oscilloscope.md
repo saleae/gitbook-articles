@@ -2,9 +2,9 @@
 
 ## Logic Analyzer vs. Oscilloscope
 
-In the real world, all electrical signals are analog \(including digital ones!\). An [oscilloscope](../oscilloscopes/what-is-an-oscilloscope.md#what-is-an-oscilloscope) allows you view analog voltages and how they change over time. Oscilloscopes are best used for evaluating signal integrity and measuring analog circuit performance.
+In the real world, all electrical signals are analog \(including digital ones!\). An [oscilloscope](../oscilloscopes/what-is-an-oscilloscope.md#what-is-an-oscilloscope) allows you to view analog voltages and how they change over time. Oscilloscopes are best used for evaluating signal integrity and measuring analog circuit performance.
 
-[Logic analyzers](what-is-a-logic-analyzer.md#what-is-a-logic-analyzer), on the other hand, represent signals in their digital form: a logic 0 or logic 1. This is similar to an oscilloscope with a 1-bit resolution. However, most logic analyzers have many more channels than oscilloscopes \(8, 16, or even over 100 channels\). Logic analyzers are great tools for viewing digital waveforms, debugging digital communication \(e.g. Serial, I2C\), and characterizing digital systems with many lines \(e.g. FPGAs\).
+On the other hand, [Logic analyzers](what-is-a-logic-analyzer.md#what-is-a-logic-analyzer) represent signals in their digital form: a logic 0 or logic 1. This is similar to an oscilloscope with a 1-bit resolution. However, most logic analyzers have many more channels than oscilloscopes \(8, 16, or even over 100 channels\). Logic analyzers are great tools for viewing digital waveforms, debugging digital communication \(e.g. Serial, I2C\), and characterizing digital systems with many lines \(e.g. FPGAs\).
 
 ### Internals of an Oscilloscope
 
