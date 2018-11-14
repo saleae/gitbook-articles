@@ -1,6 +1,6 @@
 # Saleae Articles
 
-Want to learn more about logic analyzers and oscilloscopes? Get started with our guides below!
+Want to learn more about logic analyzers and oscilloscopes? Get started with our guides below or [explore our Logic Analyzers here!](https://www.saleae.com/)
 
 ### Logic Analyzers
 
