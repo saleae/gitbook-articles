@@ -53,17 +53,32 @@ Any number of master devices and any number of slave devices can theoretically b
 
 %%%Block diagram of several I2C devices on 1 bus%%%
 
+Because of the open-drain design, I2C supports multiple masters on the same bus. If two devices start transmitting at the same time, one of them will eventually back off in a process known as "arbitration." Devices monitor the SDA line while they communicate. If a device sees that the SDA line is low when it is trying to transmit a logic high, it knows that another device is trying to communicate, and it will stop transmitting.
+
 To begin communication, a master device will issue a START condition, where the SDA line is pulled low while the SCL line is still high. The master then sends out the 7-bit address of the intended recipient on the bus, followed by a write bit \(0\) or read bit \(1\). If a device on the bus has that particular address, it will respond by pulling the SDA line low \(ACK bit\).
 
 Data can then be sent by the master or peripheral device in packets of 1 byte at a time; each byte should be acknowledged by the recipient with an ACK bit. Once communication is complete, the master will issue a STOP condition by releasing the SDA line \(which will be pulled high\) and releasing the SCL line \(will also be pulled high\).
 
+%%%I2C Timing Diagram%%%
+
+Data rate was originally limited to 100 kbps \(standard mode\). In 1992, Philips raised the speed cap to 400 kbps \(fast mode\). A special 3.4 Mbps mode \(high-speed mode\) was added 6 years later. A special set of commands must be given at lower speeds between master and peripheral to set up a high-speed connection.
+
+While any number of devices can be physically attached to an I2C bus, the 7-bit address limits the actual number of devices. Some of the addresses are reserved, and therefore, only 112 different devices can be present on the same bus. A special 10-bit mode can be enabled to allow for more devices, if necessary.
+
+I2C has a form of flow control known as "clock stretching." A peripheral device can hold the SCL line low, which tells the master device to slow the transmission rate. This technique allows the peripheral some time to process data before responding.
+
+Due to the low pin count required by I2C, many sensor manufacturers use this protocol in their chips. For example, temperature sensors, accelerometers, analog-to-digital converters, etc. can be found with I2C.
+
 ### Comparison
 
-
-
-### Uses
-
-
+|  | SPI | I2C |
+| :--- | :--- | :--- |
+| Pin drive | Push-pull | Open drain |
+| Signal lines | 4 \(plus 1 for each additional peripheral\) | 2 |
+| Max speed | No limit \(over 10 Mbps is common\) | 400 kbps in fast mode \(3.4 Mbps is possible with high-speed mode\) |
+| No. of peripherals | Only limited by number of pins available for SS lines on master | 112 with 7-bit addressing |
+| Multi-master | No | Yes |
+| Flow control | No | Yes |
 
 ### Conclusion
 
