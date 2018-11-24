@@ -40,6 +40,8 @@ SPI has four different modes that can be set, which determine how the clock oper
 
 SPI does not specify any particular voltage levels, maximum speed rates, or addressing schemes. As a result, it is up to you to decide these factors. SPI speeds can easily exceed 10 Mbps, so make sure you read the datasheets for all your parts, as that will determine the acceptable voltages, speed limits, and supported modes.
 
+Because of these speeds, SPI is useful for transferring large amounts of data. SPI is often found on sensors that require fast update rates, like accelerometers, on display devices, like LCDs, and on flash memory devices, such as NOR flash.
+
 ### I2C
 
 Philips Semiconductor \(now known as NXP Semiconductors\) created the I2C specification in 1982 to help standardize communication between chips on the same board. Using or implementing I2C does not cost anything, but NXP charges fees to allocate slave addresses.
@@ -75,12 +77,14 @@ Due to the low pin count required by I2C, many sensor manufacturers use this pro
 | :--- | :--- | :--- |
 | Pin drive | Push-pull | Open drain |
 | Signal lines | 4 \(plus 1 for each additional peripheral\) | 2 |
-| Max speed | No limit \(over 10 Mbps is common\) | 400 kbps in fast mode \(3.4 Mbps is possible with high-speed mode\) |
+| Max speed | No limit \(10-100 Mbps is common\) | 400 kbps in fast mode \(3.4 Mbps is possible with high-speed mode\) |
 | No. of peripherals | Only limited by number of pins available for SS lines on master | 112 with 7-bit addressing |
 | Multi-master | No | Yes |
 | Flow control | No | Yes |
 
 ### Conclusion
 
+Both protocols are suitable for many different applications. Most often, you are limited to whichever protocol is implemented by the manufacturer of a particular part. Some, like the Analog Devices ADXL345 accelerometer offer both I2C and SPI interfaces.
 
+If you have to choose between the two, SPI is generally the better tool if you need faster transfer speeds. I2C, on the other hand, is best if you have limited pins available on your microcontroller or microprocessor.
 
