@@ -21,15 +21,15 @@ SPI uses four active signal lines \(which do not include power and ground lines\
 
 With these four lines, a controlling device \(master\) can communicate with another peripheral device \(slave\).
 
-%%%1 to 1 SPI diagram%%%
+![SPI point-to-point connections](../.gitbook/assets/spi-1-slave.png)
 
 While you can have only one master on the SPI bus, you can add any number of peripherals. However, for each peripheral you add, you must add an additional SS line. In the example diagram, we must use three I/O lines, each controlling a separate peripheral.
 
-%%%1 to 3 SPI diagram%%%
+![SPI connections for 3 slave devices](../.gitbook/assets/spi-3-slave.png)
 
 When the master device wishes to send data to or receive date from a peripheral, is starts communication by pulling the corresponding SS line low. At the same time, it activates the clock line \(toggling SCLK high and low at a given frequency\). The master device sends out data on the MOSI line while simultaneously sampling the MISO line. As a result, data can be sent between a master device and a peripheral device at the same time \(full-duplex\).
 
-%%%SPI timing diagram%%%
+![Example timing diagram for mode 0 SPI: MOSI and MISO lines are sampled on rising SCLK edge](../.gitbook/assets/spi-timing-diagram.png)
 
 SPI has four different modes that can be set, which determine how the clock operates. The master and peripheral devices must use the same mode. Mode 0 is by far the most common mode found among devices.
 
@@ -53,7 +53,7 @@ I2C uses 2 lines \(not including power and ground\) for communication:
 
 Any number of master devices and any number of slave devices can theoretically be attached to the same bus. Both SDA and SCL lines are required to be open-drain lines. As a result, devices can only pull each line low. A pull-up resistor is required on each line to pull the line back up to high.
 
-%%%Block diagram of several I2C devices on 1 bus%%%
+![I2C connections for multiple master and multiple slave devices](../.gitbook/assets/i2c-multi-master.png)
 
 Because of the open-drain design, I2C supports multiple masters on the same bus. If two devices start transmitting at the same time, one of them will eventually back off in a process known as "arbitration." Devices monitor the SDA line while they communicate. If a device sees that the SDA line is low when it is trying to transmit a logic high, it knows that another device is trying to communicate, and it will stop transmitting.
 
