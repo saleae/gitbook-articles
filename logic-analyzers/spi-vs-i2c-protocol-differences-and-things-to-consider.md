@@ -61,7 +61,7 @@ To begin communication, a master device will issue a START condition, where the 
 
 Data can then be sent by the master or peripheral device in packets of 1 byte at a time; each byte should be acknowledged by the recipient with an ACK bit. Once communication is complete, the master will issue a STOP condition by releasing the SDA line \(which will be pulled high\) and releasing the SCL line \(will also be pulled high\).
 
-%%%I2C Timing Diagram%%%
+![](../.gitbook/assets/i2c-timing-diagram.png)
 
 Data rate was originally limited to 100 kbps \(standard mode\). In 1992, Philips raised the speed cap to 400 kbps \(fast mode\). A special 3.4 Mbps mode \(high-speed mode\) was added 6 years later. A special set of commands must be given at lower speeds between master and peripheral to set up a high-speed connection.
 
