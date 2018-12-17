@@ -26,5 +26,69 @@ Modular logic analyzers can be rack-mounted or cards that slide into a backplane
 
 Most often, modular analyzers require computer software to control collection and analyze data. Having a separate computer gives you a potentially larger screen and an easier path to upgrade the software. However, you are limited by the connection speeds \(for example, USB or Ethernet\) between the test equipment and computer.
 
-While the individual modules might be small \(able to fit in the palm of your hand\), they cannot work without the proper backplane. These backplanes can be anywhere from the size of a shoebox to a small room.
+While the individual modules might be small \(able to fit in the palm of your hand\), they cannot work without the proper backplane. These backplanes can be anywhere from the size of a shoe box to a small room.
+
+#### PC-Based
+
+PC-based logic analyzers are similar to modular analyzers in that they require host computers to control the capture parameters and display waveforms. However, they do not require a backplane to operate. 
+
+![](../.gitbook/assets/logic8.jpg)
+
+Because of the reliance on a host computer for command and control, PC-based analyzers are limited by their connection speed. Be aware of the type of connection available. For example, USB 3.0 offers higher data rates than USB 2.0.
+
+However, because you need a computer to operate such a logic analyzer, the software is easy to upgrade, and you have the option of using one or more larger screens to help you debug. Additionally, when paired with a laptop, small PC-based analyzers can be extremely portable, which can be advantageous if you are debugging a circuit in a car or at a conference.
+
+### Technical Specifications
+
+As you shop for logic analyzers, you will come across a plethora of technical specifications. It can be helpful to think about what kinds of circuits you wish to debug before looking at the various specs. For example, are you working with low speed protocols, such as UART and I2C? Do you require dozens of channels to characterize a complicated FPGA circuit? Or are you trying to debug high speed signals like Ethernet and HDMI?
+
+In this section, we'll go over some of the important specifications that you might find. Note that portable-type logic analyzers will generally have the best specifications at the cost of portability and ease-of-use.
+
+#### Channel Count
+
+The most apparent specification is the number of channels available on the logic analyzer.
+
+Easy to come by, cheap.
+
+How many do you need? Protocols vs state analysis 
+
+#### Sample Rate
+
+
+
+#### Bandwidth
+
+
+
+#### Voltage
+
+
+
+#### Input Impedance
+
+pull-down resistance
+
+capacitance
+
+### Other Features to Consider
+
+Triggering
+
+Protocol analyzers
+
+analog input
+
+over voltage protection \(buffers\)
+
+differential signals
+
+output capability
+
+ease of use
+
+support
+
+### Conclusion
+
+
 
