@@ -8,6 +8,7 @@
 * [How to Use a Logic Analyzer](logic-analyzers/how-to-use-a-logic-analyzer.md)
 * [Logic Analyzer vs. Oscilloscope](logic-analyzers/logic-analyzer-vs.-oscilloscope.md)
 * [SPI vs I2C Protocol Differences and Things to Consider](logic-analyzers/spi-vs-i2c-protocol-differences-and-things-to-consider.md)
+* [Choosing a Logic Analyzer](logic-analyzers/choosing-a-logic-analyzer.md)
 
 ## Oscilloscopes
 
