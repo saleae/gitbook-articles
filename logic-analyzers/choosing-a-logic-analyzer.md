@@ -8,7 +8,7 @@ The first important decision to make is what kind of logic analyzer do you want?
 
 #### Portable
 
-Portable logic analyzer are generally large boxes intended to sit on a workbench. Similar to an oscilloscope, they usually have a screen and a number of knobs and buttons to navigate the various menus. Many modern portable analyzers are simply cases wrapped around a computer that runs an operating system, such as Windows.
+Portable logic analyzers are generally large boxes intended to sit on a workbench. Similar to an oscilloscope, they usually have a screen and a number of knobs and buttons to navigate the various menus. Many modern portable analyzers are simply cases wrapped around a computer that runs an operating system, such as Windows.
 
 ![](../.gitbook/assets/logic_analyzer_agilent_16902a.jpg)
 
@@ -16,11 +16,11 @@ While some can have relatively large viewing areas, they often pale in compariso
 
 The name "portable" comes from the fact that the logic analyzer components are completely self-contained. Many have large handles that allow you to move the units, should the need arise. However, some are quite large and can weigh over 30 pounds, which can make it difficult to physically move such equipment.
 
-Despite their bulkiness, portable logic analyzers can contain specialized hardware that allow you to measure signals at higher frequencies. As they do not require a separate computer, you are not limited by connection speeds, such as USB and Ethernet.
+Despite their bulkiness, portable logic analyzers can contain specialized hardware that allow you to measure signals at higher frequencies. As they do not require a separate computer, you are not limited by external connection speeds, such as USB and Ethernet.
 
 #### Modular
 
-Modular logic analyzers can be rack-mounted or cards that slide into a backplane. You can swap out various modular units to create a unique test equipment setup for your specific needs.
+Modular logic analyzers can be rack-mounted or cards that slide into a backplane. You can swap out various modular units to create a unique set of test equipment for your specific needs.
 
 ![](../.gitbook/assets/data_acquisition_agilent_-2.jpg)
 
@@ -36,7 +36,7 @@ PC-based logic analyzers are similar to modular analyzers in that they require h
 
 Because of the reliance on a host computer for command and control, PC-based analyzers are limited by their connection speed. Be aware of the type of connection available. For example, USB 3.0 offers higher data rates than USB 2.0.
 
-However, because you need a computer to operate such a logic analyzer, the software is easy to upgrade, and you have the option of using one or more larger screens to help you debug. Additionally, when paired with a laptop, small PC-based analyzers can be extremely portable, which can be advantageous if you are debugging a circuit in a car or at a conference.
+Thanks to needing a separate computer to operate, the software is easy to upgrade, and you have the option of using one or more larger screens to help you debug. Additionally, when paired with a laptop, small PC-based analyzers can be extremely portable, which can be advantageous if you are debugging a circuit in a car or at a conference.
 
 ### Technical Specifications
 
@@ -46,13 +46,13 @@ In this section, we'll go over some of the important specifications that you mig
 
 #### Channel Count
 
-The most apparent specification is the number of channels available on the logic analyzer. A single channel is an input line with the ability to sample and measure a signal. It is not uncommon to find logic analyzers with 8, 16, 32, and more channels.
+The most obvious specification is the number of channels available on the logic analyzer. A channel is an input line with the ability to sample and measure a signal. It is not uncommon to find logic analyzers with 8, 16, 32, and more channels.
 
 ![Example of logic analyzer output with 14 channels](../.gitbook/assets/14-channels.png)
 
 If you plan to examine protocols with few signal lines, such as I2C, SPI, Ethernet, USB, CAN, and HDMI, you will not need more than 8 or 16 channels. On the other hand, if you are planning to debug parallel communication buses, such as PCI, ATA, and SCSI, you will want at least 32 channels.
 
-Performing a [state mode analysis](how-to-use-a-logic-analyzer.md#sampling-modes) of digital components, like FPGAs, microcontrollers, and memory, may require many channels, and some logic analyzers can contain more than 100 channels to assist with these complex circuits.
+Performing a [state mode analysis](how-to-use-a-logic-analyzer.md#sampling-modes) of digital components, like FPGAs, microcontrollers, and memory, may require many more channels. Some logic analyzers can contain more than 100 channels to assist with these complex circuits.
 
 #### Sample Rate
 
@@ -74,7 +74,7 @@ Note that bandwidth is given by the -3 dB point of signal attenuation. That mean
 
 #### Voltage
 
-There are a few things to consider with voltage. First, what is the maximum safe input voltage range on each of your channels? Some analyzers can only handle 0 to 5 V. Others have protection circuitry that allow for higher voltages. For example, if you can safely sample +/- 25 V, you can use the logic analyzer to debug RS-232 without any additional circuitry.
+There are a few things to consider with voltage. First, what is the maximum safe input voltage range on each of your channels? Some analyzers can only handle 0 to 5 V. Others have protection circuitry that allow for higher voltages. As an example, say you have a logic analyzer that can safely handle +/- 25 V inputs. As a result, you can use the logic analyzer to debug RS-232 without any additional circuitry.
 
 Second, you must think about the kinds of logic levels you will be working with. If your logic analyzer is only capable of sampling 5 V TTL levels, it might have 2 V as the logic high threshold. If you were to connect this analyzer to a 1.8 V logic circuit, it would not be able to detect any logic highs! As a result, you will want to pay attention to the voltage threshold\(s\) listed on your analyzer.
 
@@ -86,7 +86,7 @@ Most logic analyzers will have a pull-down resistor on each channel that connect
 
 This resistor will often be in the 100 kΩ to 100 MΩ range. Make sure that your circuit is capable of driving enough current through the pull-down resistor! Many advanced chips, like microprocessors and FPGAs, are not capable of driving more than a few mA or μA. A pull-down, such as 100 kΩ, might cause the voltage to drop and provide inaccurate readings on some parts.
 
-Probes also have some level of capacitance, whether through passive circuitry or the nature of the connection. At higher frequencies, the capacitor offers less impedance, which could be a problem for many digital circuits. For example, at 100 MHz a 10 pF capacitor has around 150 Ω of impedance. We recommend finding probes that have as little capacitance as possible.
+Probes also have some level of capacitance, whether through passive circuitry or through the nature of the connector and wire. At higher frequencies, the capacitor offers less impedance, which could be a problem for many digital circuits. For example, at 100 MHz a 10 pF capacitor has around 150 Ω of impedance. We recommend finding probes that have as little capacitance as possible.
 
 ### Other Features to Consider
 
@@ -98,7 +98,7 @@ While we gave you an overview of the important specifications to consider when s
 * **Over-voltage protection:** Some logic analyzers have buffers on each of their inputs. This can help prevent damage to the analyzer if you accidentally touch a probe to a higher voltage.
 * **Differential signals:** Several protocols, like USB, use differential signaling. Analyzers with the ability to measure and decode differential signals can help you debug them.
 * **Output capability:** A handful of protocol analyzers are capable of turning their input channels into outputs. This can save you from having to buy a separate frequency generator tool to test your digital circuits.
-* **Ease-of-use:** If you do not plan to use your logic analyzer on a regular basis, having a tool that is easy to use can save you time \(as you do not have to re-learn the basics each time you use it!\).
+* **Ease-of-use:** If you do not plan to use your logic analyzer on a regular basis, having a tool that is easy to use can save you time \(as you do not need to re-learn the basics each time you use it!\).
 * **Support:** Do you need help with your equipment when there is a problem? Companies offer varying levels of support, from in-person to phone chat to nothing at all.
 
 ### Conclusion
