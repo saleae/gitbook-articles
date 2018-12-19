@@ -48,6 +48,8 @@ In this section, we'll go over some of the important specifications that you mig
 
 The most apparent specification is the number of channels available on the logic analyzer. A single channel is an input line with the ability to sample and measure a signal. It is not uncommon to find logic analyzers with 8, 16, 32, and more channels.
 
+![Example of logic analyzer output with 14 channels](../.gitbook/assets/14-channels.png)
+
 If you plan to examine protocols with few signal lines, such as I2C, SPI, Ethernet, USB, CAN, and HDMI, you will not need more than 8 or 16 channels. On the other hand, if you are planning to debug parallel communication buses, such as PCI, ATA, and SCSI, you will want at least 32 channels.
 
 Performing a [state mode analysis](how-to-use-a-logic-analyzer.md#sampling-modes) of digital components, like FPGAs, microcontrollers, and memory, may require many channels, and some logic analyzers can contain more than 100 channels to assist with these complex circuits.
@@ -75,6 +77,8 @@ Note that bandwidth is given by the -3 dB point of signal attenuation. That mean
 There are a few things to consider with voltage. First, what is the maximum safe input voltage range on each of your channels? Some analyzers can only handle 0 to 5 V. Others have protection circuitry that allow for higher voltages. For example, if you can safely sample +/- 25 V, you can use the logic analyzer to debug RS-232 without any additional circuitry.
 
 Second, you must think about the kinds of logic levels you will be working with. If your logic analyzer is only capable of sampling 5 V TTL levels, it might have 2 V as the logic high threshold. If you were to connect this analyzer to a 1.8 V logic circuit, it would not be able to detect any logic highs! As a result, you will want to pay attention to the voltage threshold\(s\) listed on your analyzer.
+
+![](../.gitbook/assets/threshold-levels.png)
 
 #### Input Impedance
 
