@@ -82,9 +82,9 @@ If are still having problems with loading, you might need to look into purchasin
 
 If you are probing cables or long stretches of traces, you might be working with transmission lines. Transmission lines do not behave like theoretical wires in that they suffer from reflections, cross-talk, and interference.
 
-As a result, if you probe in the middle of the transmission wire, you might pick up some of these reflections. On an oscilloscope, these reflections look like stair-steps. Your logic analyzer would have a hard time interpreting a voltage near its threshold, so you may get a false reading
+As a result, if you probe in the middle of transmission wire with improper termination, you might pick up some of these reflections. On an oscilloscope, these reflections look like stair-steps. Your logic analyzer would have a hard time interpreting a voltage near its threshold, so you may get a false reading.
 
-%%%Stair step vs LA reading of reflection%%%
+![Example of a transmission line reflection seen on an oscilloscope](../.gitbook/assets/saleae-reflection-scope.png)
 
 Try probing closer to your receiver to understand what the signal looks like from the receiver's perspective.
 
@@ -92,7 +92,7 @@ Try probing closer to your receiver to understand what the signal looks like fro
 
 Ground loops occur when you have two points of a circuit that are supposed to be at the same reference potential but have a voltage difference between them. This can happen if you have multiple return paths in your circuit back to a common point.
 
-%%% example of ground loop%%%
+![Example of a ground loop](../.gitbook/assets/saleae-ground-loop.png)
 
 These loops act like inductors, and at high frequencies, they start to impede the changing of current. As a result, you will see a decrease in your system bandwidth.
 
@@ -102,13 +102,13 @@ At low frequencies and low channel counts \(e.g. 8 or 16 channels\), you can use
 
 As a result, a voltage will develop across the ground wire, which can degrade your measurement quality. Therefore, we recommend using a ground wire for each signal wire when working with higher frequencies.
 
-#### Avoid T-Junctions
+#### Avoid T-Junctions in Transmission Lines
 
-On transmission lines, attaching a wire that is not properly terminated can introduce reflections in the line and degrade signal integrity. 
+On transmission lines, especially at high frequencies, attaching a wire that is not properly terminated can introduce reflections in the line and degrade signal integrity. 
 
-%%%Diagram%%%
+![Example of T-junctions off a communication bus](../.gitbook/assets/saleae-t-junctions.png)
 
-To combat reflections, avoid branching PCB traces that go to a separate logic analyzer test point. Instead, consider placing the test point as close to the transmission line\(s\) as possible. If your logic analyzer uses flying lead probes, you may want to invest in specially terminated probes that attenuate signals or reduce loading.
+To combat reflections, avoid branching PCB traces that go to separate logic analyzer test points. Instead, consider placing the test points as close to the transmission lines as possible. If your logic analyzer uses flying lead probes, you may want to invest in specially terminated probes that attenuate signals or reduce loading.
 
 ### Conclusion
 
