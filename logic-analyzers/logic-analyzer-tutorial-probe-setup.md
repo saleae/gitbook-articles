@@ -24,7 +24,7 @@ Another option is to create a series of test points with mounting holes in a par
 
 #### After the Fact Probing
 
-If you are debugging a PCB that does not have a built-in logic analyzer connector, you can use "flying lead" probes. These probes are simply wires that you connect to the circuit in any configuration. Often, you will find flying lead probes with attachment heads that have a hook or grabber that allows you to connect to a variety of wires, pins, and test points.
+If you are debugging a PCB that does not have a built-in logic analyzer connector, you can use "flying lead" probes. These probes are simply wires that you connect to the circuit in any configuration. Often, you will find flying lead probes with attachment heads that have a hook or grabber. These grabbers allow you to connect to a variety of wires, pins, and test points.
 
 ![](../.gitbook/assets/saleae-probe-clip.JPG)
 
@@ -34,13 +34,13 @@ If you did not build a specialized logic analyzer connector into your PCB, findi
 
 #### Directly to Header
 
-Some flying lead probes are terminated with a 0.100-inch female or male header pin. In these cases, you can simply connect directly to an opposite connector on your board.
+Some flying lead probes are terminated with a 0.100-inch female or male header pin. In these cases, you can simply connect directly to the opposing header on your board.
 
 ![](../.gitbook/assets/saleae-probe-header.JPG)
 
 #### Clip to Exposed Wire, Pin, or Header
 
-Many flying lead probes have heads with hooks or grabbers that let you connect to any exposed conductor. For example, you can attach these clips to male headers on the board or to wire ends.
+Many flying lead probes have heads with hooks or grabbers that let you connect to any exposed conductor. For example, you can them to male headers on a board or to wire ends.
 
 ![](../.gitbook/assets/saleae-probe-wire.JPG)
 
@@ -50,7 +50,7 @@ Some electrical components have leads large enough to grab with these probes. Ma
 
 #### Clip to Test Point
 
-Some boards have built-in test points for attaching oscilloscope or logic analyzer probes. They do not need to be populated until you need to test, and they make connecting to a node much easier.
+Some boards have built-in test points for attaching oscilloscope or logic analyzer probes. Test point components do not need to be populated until you need them, and they make connecting to a node much easier.
 
 ![](../.gitbook/assets/saleae-probe-tp.JPG)
 
@@ -62,25 +62,25 @@ Some fine-pitch SMD components are too small to grab with probes, but you can st
 
 ![](../.gitbook/assets/saleae-smd-wire.JPG)
 
-If no test points or exposed leads are available, you can scrape away solder mask to manually expose a trace and solder a thin wire to it.
+If no test points or exposed leads are available, you can manually scrape away solder mask to expose a trace and solder a thin wire to it.
 
 ![](../.gitbook/assets/saleae-trace-wire.JPG)
 
 ### Troubleshooting
 
-If you are experiencing problems capturing a good signal, we recommend using this section as a checklist to ensure you are using good probing techniques.
+If you are experiencing problems capturing a good signal, we recommend using this section as a checklist to ensure you are employing good probing techniques.
 
 #### Decrease Probe Loading
 
-Whenever you attach a probe to a circuit, you are adding a load to that node \(even if it is a very small load\). Probe resistance, capacitance, and inductance make up the impedance of the probe, and at high frequencies, this impedance can pose problems. Some systems may not work under such loading, or you might get inaccurate readings.
+Whenever you attach a probe to a circuit, you are adding a load to that node \(even if it is a very small load\). Probe resistance, capacitance, and inductance make up the impedance of the probe, and at high frequencies, this impedance can cause problems. Some systems may not work under such loading, or you might get inaccurate readings.
 
 Large surface areas on connectors can form capacitors, and long wires can add inductance. As a rule, you should use the shortest wires possible for your probes and use the smallest surface area possible to make contact with your circuit.
 
-If are still having problems with loading, you might need to look into purchasing better probes that offer less impedance.
+If are still having problems with loading, you might need to look into purchasing better probes that offer more impedance.
 
 #### Probe the Correct Location
 
-If you are probing cables or long stretches of traces, you might be working with transmission lines. Transmission lines do not behave like theoretical wires in that they suffer from reflections, cross-talk, and interference.
+If you are probing cables or long stretches of traces, you might be working with transmission lines. Transmission lines do not behave like ideal wires in that they suffer from reflections, cross-talk, and interference.
 
 As a result, if you probe in the middle of transmission wire with improper termination, you might pick up some of these reflections. On an oscilloscope, these reflections look like stair-steps. Your logic analyzer would have a hard time interpreting a voltage near its threshold, so you may get a false reading.
 
@@ -104,7 +104,7 @@ As a result, a voltage will develop across the ground wire, which can degrade yo
 
 #### Avoid T-Junctions in Transmission Lines
 
-On transmission lines, especially at high frequencies, attaching a wire that is not properly terminated can introduce reflections in the line and degrade signal integrity. 
+On transmission lines, especially at high frequencies, attaching a branching wire that is not properly terminated can introduce reflections in the line and degrade signal integrity. 
 
 ![Example of T-junctions off a communication bus](../.gitbook/assets/saleae-t-junctions.png)
 
