@@ -2,7 +2,7 @@
 
 Capturing a clean signal with your logic analyzer is crucial to debugging your digital circuit. If you miss logic levels due to a poor probe setup, you might spend hours trying to find a bug that doesn't exist--the problem was in your test equipment all along! Or you might introduce a large enough load to your circuit that your system stops working altogether.
 
-Selecting the proper probe and connecting it to your circuit correctly becomes increasingly important at higher frequencies. When you start working with circuits over about 100 MHz, you need to consider grounding, probe impedance, and probe location.
+Selecting the proper probe and connecting it to your circuit correctly becomes increasingly important at higher frequencies. When you start working with signals over about 100 MHz, you need to consider grounding, probe impedance, and probe location.
 
 In this tutorial, we will look at different probe options, various ways to connect them to your circuit, and some tips to consider when probing high speed circuits.
 
