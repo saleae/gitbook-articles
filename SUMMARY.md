@@ -16,4 +16,5 @@
 * [What is an Oscilloscope?](oscilloscopes/what-is-an-oscilloscope.md)
 * [How to Use an Oscilloscope](oscilloscopes/how-to-use-an-oscilloscope.md)
 * [Digital Oscilloscopes](oscilloscopes/digital-oscilloscopes.md)
+* [How Does an Oscilloscope Work?](oscilloscopes/how-does-an-oscilloscope-work.md)
 
