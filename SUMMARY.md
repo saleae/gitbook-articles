@@ -17,4 +17,5 @@
 * [How to Use an Oscilloscope](oscilloscopes/how-to-use-an-oscilloscope.md)
 * [Digital Oscilloscopes](oscilloscopes/digital-oscilloscopes.md)
 * [How Does an Oscilloscope Work?](oscilloscopes/how-does-an-oscilloscope-work.md)
+* [How to Measure Current with an Oscilloscope](oscilloscopes/how-to-measure-current-with-an-oscilloscope.md)
 

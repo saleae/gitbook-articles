@@ -6,7 +6,7 @@
 
 ![Figure 1: Digital oscilloscope in action](../.gitbook/assets/040914-f-0000c-005.JPG)
 
-At its core, an oscilloscope allows you to watch how the voltage between two points in a circuit varies over time. For example, if you were to connect the oscilloscope's reference clip to a circuit's ground node and probe a node whose voltage varied in a sinusoidal pattern, your oscilloscope might display something similar to Figure 2.
+At its core, an oscilloscope allows you to watch how the voltage between two points in a circuit varies over time. For example, if you were to probe a sinusoidal voltage, your oscilloscope might display something similar to Figure 2.
 
 ![Figure 2: Sine wave as measured by an oscilloscope](../.gitbook/assets/2018-10-01_1606.png)
 
@@ -24,11 +24,11 @@ Unfortunately, most electrical signals varied too quickly for the ondograph's me
 
 In the late 1800s, scientists discovered that sub-atomic particles \(now known as electrons\) would travel in straight lines from the cathode end of a [Crookes tube](https://en.wikipedia.org/wiki/Crookes_tube). As a result, scientists dubbed these particles "cathode rays." In the subsequent years, other scientists discovered that these rays could be bent by applying an electric field or a magnetic field.
 
-In 1897, Karl Ferdinand Braun built the first oscilloscope cathode ray tube \(CRT\) by applying a voltage to vertical plates over and under the electron beam. The electron beam would strike a phosphor plate on the opposite end and paint a bright dot. As the voltage varied across the plates, the dot would dance up and down, as shown in Figure 4.
+In 1897, Karl Ferdinand Braun, German physicist and inventor, built the first oscilloscope cathode ray tube \(CRT\) by applying a voltage to vertical plates over and under the electron beam. The electron beam would strike a phosphor plate on the opposite end and paint a bright dot. As the voltage varied across the plates, the dot would dance up and down, as shown in Figure 4.
 
 ![Figure 4: Cathode ray tube with one set of plates](../.gitbook/assets/crt-diagram.png)
 
-Jonathan Zenneck added a set of horizontal plates to the CRT in 1899, which allowed the electron beam to sweep back and forth across the screen. With the ability to control the vertical and horizontal motion, we can now construct a graph of an electrical signal on a screen in real time.
+Jonathan Zenneck, physicist and electrical engineer from the Kingdom of Württemberg \(now part of Germany\), added a set of horizontal plates to the CRT in 1899, which allowed the electron beam to sweep back and forth across the screen. With the ability to control the vertical and horizontal motion, we can now construct a graph of an electrical signal on a screen in real time.
 
 The following video shows how an analog oscilloscope can be used to measure voltages in a circuit:
 
@@ -58,7 +58,7 @@ Modern DSOs are essentially computers with high-end ADCs used to sample voltages
 
 ![Figure 6: Using a modern digital storage oscilloscope](../.gitbook/assets/using_dso.jpg)
 
-Figure 7 shows the internal workings of a digital storage oscilloscopes. Note that this same diagram can be found in the [Logic Analyzer vs. Oscilloscope](../logic-analyzers/logic-analyzer-vs.-oscilloscope.md) article.
+Figure 7 shows the internal workings of a digital storage oscilloscopes.
 
 ![Figure 7: Block diagram of a digital storage oscilloscope](../.gitbook/assets/oscilloscope_block_diagram%20%281%29.png)
 

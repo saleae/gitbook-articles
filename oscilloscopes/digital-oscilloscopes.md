@@ -2,6 +2,10 @@
 
 This tutorial will explain some features that are slightly more advanced and may be available only on digital oscilloscopes \(more properly known as digital storage oscilloscopes, or DSOs\). Our two previous tutorials have described basic concepts and setup procedures, which will help build a solid foundation for the lessons in this tutorial.
 
+![](../.gitbook/assets/my_friend_oscilloscope_sm.jpg)
+
+“[My Friend Oscilloscope](https://commons.wikimedia.org/wiki/File:My_friend_oscilloscope.jpg)” by Wild Pancake is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en).
+
 {% page-ref page="what-is-an-oscilloscope.md" %}
 
 {% page-ref page="how-to-use-an-oscilloscope.md" %}
@@ -32,7 +36,9 @@ The most common type of oscilloscope probe has a little slide switch on its body
 
 ![Figure 2: 1X and 10X probe attenuation switch](../.gitbook/assets/figure-2%20%281%29.jpg)
 
-Your oscilloscope may have a setting that allows you to specify probes with different characteristics, such as 100X for dealing with very high voltages.
+The default for most oscilloscopes is 10X attenuation, as it offers a balance of bandwidth and amplitude. 1X should be reserved for signals with low frequency and low voltages. Additionally, your oscilloscope may have a setting that allows you to specify probes with different characteristics, such as 100X for dealing with very high voltages.
+
+
 
 ### Multiple Views
 
