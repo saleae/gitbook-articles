@@ -59,3 +59,9 @@ If you only deal with steady DC voltages, and you never use components that are 
 * You may also use an oscilloscope to view rapid events in the real world such as sounds or mechanical vibrations, which you can convert into electronic signals for the scope to display.
 * Since oscilloscopes have become so affordable, they can be standard equipment not only for engineers but for hobbyists who want to see exactly what's going on inside electronic circuits.
 
+### Further Reading
+
+If you're interested in reading more about oscilloscopes, check out a blog from Tektronix [here](https://www.tek.com/blog/what-is-an-oscilloscope).
+
+
+
