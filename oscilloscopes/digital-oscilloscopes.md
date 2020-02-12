@@ -84,7 +84,7 @@ All of these trigger options may help to detect events such as voltage spikes th
 
 Any digital oscilloscope should be able to derive immediate numeric measurements from a trace or a segment of a trace. These measurements will include the frequency of a signal, its minimum and maximum voltage, its average voltage, and its RMS value.
 
-RMS is an acronym for root-mean-square, and is calculated by squaring each of a series of regularly spaced voltage measurements, finding the average of the squares, and then extracting the square root of the average. The result is equivalent in power to a DC voltage of the same value; thus 110V DC should cause an incandescent bulb to burn as brightely as 110V AC RMS, even though the AC signal will have higher peak values.
+RMS is an acronym for root-mean-square, and is calculated by squaring each of a series of regularly spaced voltage measurements, finding the average of the squares, and then extracting the square root of the average. The result is equivalent in power to a DC voltage of the same value; thus 110V DC should cause an incandescent bulb to burn as brightly as 110V AC RMS, even though the AC signal will have higher peak values.
 
 Other features may be available in oscilloscopes, but they are less commonly used or more technical than the ones listed here.
 
