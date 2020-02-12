@@ -64,7 +64,7 @@ As an example, if you are planning to debug a SPI bus, which can reach up to spe
 
 #### Bandwidth
 
-Bandwidth is describes the maximum frequency that the front end of the analyzer can handle. Unlike sample rate, the bandwidth is determined by the analog components used in the probes and buffers.
+Bandwidth describes the maximum frequency that the front end of the analyzer can handle. Unlike sample rate, the bandwidth is determined by the analog components used in the probes and buffers.
 
 This video does a great job of describing the differences between bandwidth and sample rate. Even though it shows an oscilloscope, the same principles apply to logic analyzers.
 
