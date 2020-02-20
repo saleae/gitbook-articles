@@ -22,7 +22,7 @@ One of the first attempts at automating the system of converting electrical sign
 
 Unfortunately, most electrical signals varied too quickly for the ondograph's mechanical system. As a result, a signal needed to be sampled multiple times to be drawn on the paper accurately.
 
-In the late 1800s, scientists discovered that sub-atomic particles \(now known as electrons\) would travel in straight lines from the cathode end of a [Crookes tube](https://en.wikipedia.org/wiki/Crookes_tube). As a result, scientists dubbed these particles "cathode rays." In the subsequent years, other scientists discovered that these rays could be bent by applying an electric field or a magnetic field.
+In the late 1800s, scientists discovered that subatomic particles \(now known as electrons\) would travel in straight lines from the cathode end of a [Crookes tube](https://en.wikipedia.org/wiki/Crookes_tube). As a result, scientists dubbed these particles "cathode rays." In the subsequent years, other scientists discovered that these rays could be bent by applying an electric field or a magnetic field.
 
 In 1897, Karl Ferdinand Braun, German physicist and inventor, built the first oscilloscope cathode ray tube \(CRT\) by applying a voltage to vertical plates over and under the electron beam. The electron beam would strike a phosphor plate on the opposite end and paint a bright dot. As the voltage varied across the plates, the dot would dance up and down, as shown in Figure 4.
 
@@ -40,7 +40,7 @@ Now that we've seen how analog oscilloscopes came into being, lets break down th
 
 **Probe:** The piece that connects to your circuit under test. Most probes have two tips, as oscilloscopes measure the electric potential difference \(voltage\) between two points.
 
-**Amplifier/Attenuator:** Often, an electrical signal needs to be amplified \(increase the amplitude\) or attenuated \(decrease the amplitude\) to be effectively displayed to the user or to not damage the internal circuitry of the oscilloscope.
+**Amplifier/Attenuator:** Often, an electrical signal needs to be amplified \(increased in amplitude\) or attenuated \(decreased in amplitude\) to be effectively displayed to the user or to not damage the internal circuitry of the oscilloscope.
 
 **Trigger System:** A trigger is a user-defined condition \(such as a voltage threshold\) that determines when the oscilloscope should begin drawing a waveform. This can be extremely helpful in finding sporadic pulses in a circuit or synchronizing the display to a repeating pattern, like a sine wave, so that it appears steady on the screen.
 
@@ -58,7 +58,7 @@ Modern DSOs are essentially computers with high-end ADCs used to sample voltages
 
 ![Figure 6: Using a modern digital storage oscilloscope](../.gitbook/assets/using_dso.jpg)
 
-Figure 7 shows the internal workings of a digital storage oscilloscopes.
+Figure 7 shows the internal workings of a digital storage oscilloscope.
 
 ![Figure 7: Block diagram of a digital storage oscilloscope](../.gitbook/assets/oscilloscope_block_diagram%20%281%29.png)
 
