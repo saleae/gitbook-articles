@@ -4,19 +4,19 @@
 
 A logic analyzer is an instrument for capturing, displaying, and measuring multiple electronic signals simultaneously in a digital circuit. Logic analyzers are capable of showing the relationship and timing among many different signals in a digital system and are often capable of analyzing digital communication protocols, such as I2C, SPI, and Serial. As a result, a logic analyzer is the best tool for debugging digital circuits and digital communication systems.
 
-![Logic analyzer decoding I2C and serial data](../.gitbook/assets/2018-10-05_1016.png)
+![Logic analyzer decoding I2C and serial data](../.gitbook/assets/2018-10-05\_1016.png)
 
 ### Invention of the Logic Analyzer
 
-The 1960s saw the rise of the integrated circuit \(IC\), which meant that circuits started to become smaller. In turn, thousands--eventually millions--of transistors could be packed into a single chip to perform complex digital logic operations, forming the basis for most microcontrollers, microprocessors, and field-programmable gate arrays \(FPGAs\) that we know today.
+The 1960s saw the rise of the integrated circuit (IC), which meant that circuits started to become smaller. In turn, thousands--eventually millions--of transistors could be packed into a single chip to perform complex digital logic operations, forming the basis for most microcontrollers, microprocessors, and field-programmable gate arrays (FPGAs) that we know today.
 
 As transistor count and pin count grew on these ICs, testing and characterizing them became increasingly difficult. Oscilloscopes have been around since the 1930s, and while they are often considered the de facto test instrument for many electrical engineers, adding more than a handful of channels to an oscilloscope proved extremely costly.
 
 In 1973, Hewlett Packard announced the invention of the first "Logic Analyzer" that could measure and display logic states across a set of LEDs. The HP 5000A was the first commercially available logic analyzer but was limited to only two channels. In the years to come, commercial logic analyzers began boasting dozens of channels that could read and display digital logic in parallel.
 
-![Tektronix Logic Analyzer TLA5204](../.gitbook/assets/tektronix_logicanalyzer_tla5204.jpg)
+![Tektronix Logic Analyzer TLA5204](../.gitbook/assets/Tektronix\_LogicAnalyzer\_TLA5204.jpg)
 
-_Image credits: "_[_Tektronix Logic Analyzer TLA5204_](https://commons.wikimedia.org/wiki/File:Tektronix_LogicAnalyzer_TLA5204.jpg)_" by_ [_Vonvon_](https://commons.wikimedia.org/wiki/User:Vonvon) _is licensed under_ [_CC BY 3.0_](https://creativecommons.org/licenses/by-sa/3.0/deed.en)\_\_
+_Image credits: "_[_Tektronix Logic Analyzer TLA5204_](https://commons.wikimedia.org/wiki/File:Tektronix\_LogicAnalyzer\_TLA5204.jpg)_" by_ [_Vonvon_](https://commons.wikimedia.org/wiki/User:Vonvon) _is licensed under_ [_CC BY 3.0_](https://creativecommons.org/licenses/by-sa/3.0/deed.en)__
 
 The oscilloscope is still the perfect tool for analyzing how analog voltages between two points varies over time on up to typically 4 channels. Even for digital systems, an oscilloscope can be great for inspecting analog properties of a signal such as rise and fall times, ringing, power consumption, jitter, and propagation delays. On the other hand, if you require a higher channel count to trace and correlate multiple digital lines simultaneously, a logic analyzer is the right tool for the job.
 
@@ -34,13 +34,13 @@ Similar to oscilloscopes, logic analyzers can be configured to begin recording o
 
 Many modern logic analyzers include some oscilloscope functionality and vice versa. These new tools, capable of recording and analyzing digital as well as analog waveforms, are known as _mixed-signal oscilloscopes_. Test equipment that serve multiple purposes can make characterizing complex circuits and systems easier.
 
-![Analyzing digital and analog waveforms](../.gitbook/assets/2018-10-01_1446.png)
+![Analyzing digital and analog waveforms](../.gitbook/assets/2018-10-01\_1446.png)
 
 #### Portability
 
-Many standalone logic analyzers include screens capable of displaying the captured signal data. However, as personal computers become more powerful with faster peripheral ports \(for example, USB 3.0\), some logic analyzers forgo the screen and rely on computer software to perform the analysis. This saves on equipment size and costs.
+Many standalone logic analyzers include screens capable of displaying the captured signal data. However, as personal computers become more powerful with faster peripheral ports (for example, USB 3.0), some logic analyzers forgo the screen and rely on computer software to perform the analysis. This saves on equipment size and costs.
 
-![PC-based logic analyzers can be quite small](../.gitbook/assets/saleae_cable_harness.jpg)
+![PC-based logic analyzers can be quite small](../.gitbook/assets/saleae\_cable\_harness.jpg)
 
 #### Ease of Data Navigation
 
@@ -54,9 +54,9 @@ Logic analyzers, whether standalone or attached to a computer, usually include s
 
 Modern logic analyzers and logic analyzer software contain many advanced features that help users characterize signals. This includes measuring aspects of the signal, such as pulse width, frequency and period of periodic signals, as well as duty cycle.
 
-![Measuring period, frequency, and duty cycle of a square wave](../.gitbook/assets/2018-10-01_1457.png)
+![Measuring period, frequency, and duty cycle of a square wave](../.gitbook/assets/2018-10-01\_1457.png)
 
-If you are analyzing transmission data between two systems, a logic analyzer can be an invaluable tool for timing analysis. For example, with I2C, the data line \(SDA\) needs to be held at its intended value for a particular amount of time \(part dependent\) before the rising edge of the clock line \(SCL\). This is known as _setup_ time. For most implementations of I2C, SDA also needs to be held at its intended value until the subsequent falling edge of SCL. This is known as _hold_ time.
+If you are analyzing transmission data between two systems, a logic analyzer can be an invaluable tool for timing analysis. For example, with I2C, the data line (SDA) needs to be held at its intended value for a particular amount of time (part dependent) before the rising edge of the clock line (SCL). This is known as _setup_ time. For most implementations of I2C, SDA also needs to be held at its intended value until the subsequent falling edge of SCL. This is known as _hold_ time.
 
 A logic analyzer with a fast enough sample rate can help measure setup and hold times accurately. This can help ensure your digital messages are being read properly by the receiver.
 
@@ -72,7 +72,7 @@ With recorded data, many logic analyzers will allow you to search through the da
 
 _Portable logic analyzers_ have the more traditional "test equipment" form factor, often larger than most workbench oscilloscopes. They are considered "portable" as they include everything required to capture, view, and analyze digital signals such as probes, a screen, cursor controls, and sometimes a full keyboard.
 
-![Example of a portable logic analyzer](../.gitbook/assets/34227038302_848b4e6729_k.jpg)
+![Example of a portable logic analyzer](../.gitbook/assets/34227038302\_848b4e6729\_k.jpg)
 
 #### Modular Logic Analyzers
 
@@ -89,8 +89,7 @@ _PC-based logic analyzers_ rely on computers to perform the heavy lifting of dis
 Oscilloscopes can measure digital signals in a similar fashion to logic analyzers but are limited by the number of channels available. An oscilloscope is the right tool for measuring how the voltage between two points in a circuit varies or fluctuates over time. However, logic analyzers can be extremely useful for testing, debugging, and characterizing digital circuits with several advantages over oscilloscopes:
 
 * More channels than an oscilloscope
-* Characterize the output of a digital circuit \(e.g. FPGAs\)
-* Debug complex embedded firmware by toggling general purpose input/output \(GPIO\) pins
+* Characterize the output of a digital circuit (e.g. FPGAs)
+* Debug complex embedded firmware by toggling general purpose input/output (GPIO) pins
 * Quickly measure and decode various digital protocols
 * PC-based logic analyzers can be great for debugging in the field due to their small size and portability
-
