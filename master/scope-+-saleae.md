@@ -2,7 +2,7 @@
 
 ### Understanding the cause
 
-Your **Scope** are great for **“what’s it look like?”**
+Your **Scope** is great for **“what’s it look like?”**
 
 Your **Saleae** is great for **“what’s the history?”**
 
