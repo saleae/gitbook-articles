@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Saleae Articles](README.md)
+  * [Scope + Saleae](master/scope-+-saleae.md)
 
 ## Logic Analyzers
 
@@ -18,4 +19,3 @@
 * [Digital Oscilloscopes](oscilloscopes/digital-oscilloscopes.md)
 * [How Does an Oscilloscope Work?](oscilloscopes/how-does-an-oscilloscope-work.md)
 * [How to Measure Current with an Oscilloscope](oscilloscopes/how-to-measure-current-with-an-oscilloscope.md)
-
